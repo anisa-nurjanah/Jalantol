@@ -30,7 +30,7 @@
                     <ul class="nav child_menu">
                       <li><a href="form.html">Data Umum</a></li>
                       <li><a href="<?=site_url('Data_spasial')?>">Data Spasial</a></li>
-                      <li><a href="form_validation.html">Data Teknik</a></li>
+                      <li><a href="<?=site_url('Data_teknik')?>">Data Teknik</a></li>
                     </ul>
                   </li>
 

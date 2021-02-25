@@ -1,6 +1,35 @@
 <?=content_open('Dashboard')?>
+
+
+<!-- <ul class="stats-overview">
+  <li>
+    <span class="name"> Jalan Tol Beroperasi </span>
+    <span class="value text-success"> 57 </span>
+    <h7>di Indonesia </h7>
+  </li>
+  <li>
+  <span class="name"> Total Panjang Jalan Tol </span>
+    <span class="value text-success"> 2303,8 </span>
+    <h7>dalam KM</h7>
+  </li>
+  <li class="hidden-phone">
+  <span class="name"> Total Jalan Tol </span>
+    <span class="value text-success"> 1 </span>
+    <h7>Terdaftar di Sistem </h7>
+  </li>
+  <li class="hidden-phone">
+  <span class="name"> Total Data Leger Jalan Tol </span>
+    <span class="value text-success"> 2 </span>
+    <h7>Terdaftar di Sistem </h7>
+  </li>
+</ul>
+
+ -->
+
+
                
           <!-- DASHBOARD CONTENT 1 -->
+
           <div class="col-md-3 col-sm-3  tile">
             <span>Jalan Tol Beroperasi</span>
             <h2>57</h2>
