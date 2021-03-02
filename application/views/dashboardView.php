@@ -1,38 +1,13 @@
 <?=content_open('Dashboard')?>
-
-
-<!-- <ul class="stats-overview">
-  <li>
-    <span class="name"> Jalan Tol Beroperasi </span>
-    <span class="value text-success"> 57 </span>
-    <h7>di Indonesia </h7>
-  </li>
-  <li>
-  <span class="name"> Total Panjang Jalan Tol </span>
-    <span class="value text-success"> 2303,8 </span>
-    <h7>dalam KM</h7>
-  </li>
-  <li class="hidden-phone">
-  <span class="name"> Total Jalan Tol </span>
-    <span class="value text-success"> 1 </span>
-    <h7>Terdaftar di Sistem </h7>
-  </li>
-  <li class="hidden-phone">
-  <span class="name"> Total Data Leger Jalan Tol </span>
-    <span class="value text-success"> 2 </span>
-    <h7>Terdaftar di Sistem </h7>
-  </li>
-</ul>
-
- -->
-
+<?=content_welcome('John Doe')?>
+<?=content_main_1('')?>
 
                
           <!-- DASHBOARD CONTENT 1 -->
 
           <div class="col-md-3 col-sm-3  tile">
             <span>Jalan Tol Beroperasi</span>
-            <h2>57</h2>
+            <h2 class="value text-success">57</h2>
             <h7>di Indonesia </h7>
             <span class="sparkline_one" style="height: 160px;">
                   <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
@@ -40,7 +15,7 @@
           </div>
           <div class="col-md-3 col-sm-3  tile">
             <span>Total Panjang Jalan Tol</span>
-            <h2>2303,8</h2>
+            <h2 class="value text-success">2303,8</h2>
             <h7>dalam KM </h7>
             <span class="sparkline_one" style="height: 160px;">
                   <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
@@ -48,7 +23,7 @@
           </div>
           <div class="col-md-3 col-sm-3  tile">
             <span>Total Jalan Tol</span>
-            <h2>1</h2>
+            <h2 class="value text-success">1</h2>
             <h7>Terdaftar di Sistem </h7>
             <span class="sparkline_one" style="height: 160px;">
                   <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
@@ -56,7 +31,7 @@
           </div>
           <div class="col-md-3 col-sm-3  tile">
             <span>Total Data Leger Jalan Tol</span>
-            <h2>2</h2>
+            <h2 class="value text-success">2</h2>
             <h7>Terdaftar di Sistem</h7>
             <span class="sparkline_one" style="height: 160px;">
                   <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
@@ -142,7 +117,7 @@
             <td class=" ">PT Hutama Karya</td>
             <td class=" ">2018</td>
             <td class=" ">40 Tahun </td>
-            <td class=" last"><a href="#">Sudah</a>
+            <td class=" last"><a href="<?=site_url('Data_umum')?>">Sudah</a>
             </td>
         </tr>
 
@@ -150,4 +125,4 @@
         </table>
         </div>
 
-<?=content_close()?>
+<?=content_close_1()?>

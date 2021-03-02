@@ -4,50 +4,121 @@ function template($a=''){
 }
 ?>
 
+
+
 <?php
 function content_open($title=''){
-    return ' <div class="right_col" role="main">
+    return ' 
+    <div class="right_col" role="main">
     <div class="">
       <div class="page-title">
         <div class="title_left">
           <h3>'.$title.'</h3>
+        </div>  
+        <div class="nav navbar-right panel_toolbox">
+          <span class="btn btn-info">Tambah Kartu Leger Jalan Tol</span>
         </div>
+      </div>
+    <div class="clearfix"></div>';
+}
+?>
 
-        <div class="title_right">
-          <div class="col-md-5 col-sm-5   form-group pull-right top_search">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
+<?php
+function content_welcome($admin=''){
+return ' <div class="row">
+<div class="col-md-12 col-sm-12  ">
+  <div class="x_panel">
+      <h7>Selamat Datang '.$admin.' di Sistem Informasi Geografis Jalan Tol</h7>
+  </div>
+</div>
+</div>';
+}
+?>
+
+<?php
+function content_updated(){
+return ' <div class="row">
+<div class="col-md-12 col-sm-12  ">
+  <div class="x_panel">
+      <h7>Data Anda Berhasil diperbarui</h7>
+  </div>
+</div>
+</div>';
+}
+?>
+
+<?php
+function content_deleted(){
+return ' <div class="row">
+<div class="col-md-12 col-sm-12  ">
+  <div class="x_panel">
+      <h7>Data Anda Berhasil dihapus</h7>
+  </div>
+</div>
+</div>';
+}
+?>
+
+<?php
+function content_Added(){
+return ' <div class="row">
+<div class="col-md-12 col-sm-12  ">
+  <div class="x_panel">
+      <h7>Anda berhasil menambahkan data</h7>
+  </div>
+</div>
+</div>';
+}
+?>
+
+<?php
+function content_main($title=''){
+return '
+<div class="row">
+  <div class="col-md-12 col-sm-12  ">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>'.$title.'</h2>
+
+        <ul class="nav navbar-right panel_toolbox">
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+        </ul>
+
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">';
+}
+?>
+
+
+
+
+
+
+<?php
+function content_umum($ruas_tol=''){
+return '
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 ">
+		<div class="x_panel">
+			<div class="x_title">
+			<h2>RUAS '.$ruas_tol.'</h2>
+					<ul class="nav navbar-right panel_toolbox">
+            <li>
+            <div class="form-group pull-right top_search">
+              <div class="input-group">
+              <input type="search" class="form-control input-sm" placeholder aria-controls="datatable">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
               </span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="clearfix"></div>
-
-      <div class="row">
-        <div class="col-md-12 col-sm-12  ">
-          <div class="x_panel">
-            <div class="x_title">
-              <h2>'.$title.'</h2>
-              <ul class="nav navbar-right panel_toolbox">
-                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                </li>
-                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-              </ul>
-              <div class="clearfix"></div>
-            </div>
-            <div class="x_content">';
+            </li>
+					</ul>
+				<div class="clearfix">';
+        
 }
 ?>
 
@@ -58,6 +129,31 @@ function content_close(){
             </div>
         </div>
     </div>
+</div>
+
+';
+}
+?>
+
+
+<?php
+function content_main_1(){
+return '
+<div class="row">
+  <div class="col-md-12 col-sm-12  ">
+    <div class="x_panel">
+      <div class="x_content">';
+}
+?>
+
+<?php
+function content_close_1(){
+    return '
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>';
 }
 ?>

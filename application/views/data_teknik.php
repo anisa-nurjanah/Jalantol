@@ -1,4 +1,25 @@
 <?=content_open('Data Teknik')?>
+<?=content_welcome('John Doe')?>
+<?=content_main('Data Teknik')?>
+<form class="form-horizontal form-label-left">
+<div class="form-group row">
+	<label class="control-label">Nama Jalan Tol : </label>
+			<div class="col-md-3 col-sm-3 ">
+				<select class="form-control">
+					<option>BAKAUHENI - TERBANGGI BESAR</option>
+        </select>
+			</div>
+
+  <label class="control-label">KM</label>
+			<div class="col-md-3 col-sm-3 ">
+				<select class="form-control">
+					<option>KM 47+974 s/d KM48+502</option>
+				</select>
+      </div>
+      <span class="btn btn-primary">Tambah Data Teknik</span>
+</div>
+
+</form>
 
             <div class="row">
               <div class="col-md-12">
@@ -353,6 +374,10 @@
             </div>
         </div>
 
+        <?=content_close()?>
+
+
+        <?=content_main('Data Numerik')?>
         <div class="row">
             <div class="col-md-12">
                 <div class="x_panel">

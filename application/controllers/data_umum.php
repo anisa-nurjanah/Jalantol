@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Data_Umum extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,10 +20,10 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
-		$datacontent['admin']='Admin';
-		$datacontent['title']='Dashboard';
-		$data['content']=$this->load->view('dashboardView','$datacontent',TRUE);
-		$data['admin']=$datacontent['admin'];
+		$datacontent['ruas_tol']='BAKAUHENI - TERBANGGI BESAR';
+		$datacontent['title']='Data Umum';
+		$data['content']=$this->load->view('data_umum','$datacontent',TRUE);
+		$data['ruas_tol']=$datacontent['ruas_tol'];
 		$this->load->view('layouts/html',$data);
 
 	}
