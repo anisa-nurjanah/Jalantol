@@ -4,8 +4,6 @@ function template($a=''){
 }
 ?>
 
-
-
 <?php
 function content_open($title=''){
     return ' 
@@ -17,6 +15,7 @@ function content_open($title=''){
         </div>  
         <div class="nav navbar-right panel_toolbox">
           <span class="btn btn-info">Tambah Kartu Leger Jalan Tol</span>
+          
         </div>
       </div>
     <div class="clearfix"></div>';
@@ -91,15 +90,9 @@ return '
 }
 ?>
 
-
-
-
-
-
 <?php
 function content_umum($ruas_tol=''){
 return '
-
 <div class="row">
 	<div class="col-md-12 col-sm-12 ">
 		<div class="x_panel">
@@ -107,14 +100,9 @@ return '
 			<h2>RUAS '.$ruas_tol.'</h2>
 					<ul class="nav navbar-right panel_toolbox">
             <li>
-            <div class="form-group pull-right top_search">
-              <div class="input-group">
-              <input type="search" class="form-control input-sm" placeholder aria-controls="datatable">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-              </span>
-              </div>
-            </div>
+            <select class="form-control">
+              <option>BAKAUHENI - TERBANGGI BESAR</option>
+            </select>
             </li>
 					</ul>
 				<div class="clearfix">';

@@ -13,7 +13,14 @@
     <link href="<?=template('vendors/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
     <!-- NProgress -->
     <link href="<?=template('vendors/nprogress/nprogress.css')?>" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+
 
     <!-- Custom Theme Style -->
     <link href="<?=template('build/css/custom.min.css')?>" rel="stylesheet">
   </head>
+
+  

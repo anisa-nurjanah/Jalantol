@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Data_teknik extends CI_Controller {
+class Form_new extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,7 +21,7 @@ class Data_teknik extends CI_Controller {
 	public function index()
 	{
 		$datacontent['title']='Data Teknik';
-		$data['content']=$this->load->view('datateknik/data_teknik',$datacontent,TRUE);
+		$data['content']=$this->load->view('form_new',$datacontent,TRUE);
 		$data['title']=$datacontent['title'];
 		$this->load->view('layouts/html',$data);
 	}

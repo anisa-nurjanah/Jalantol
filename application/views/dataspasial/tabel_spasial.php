@@ -10,7 +10,7 @@
 				</select>
 
 			</div>
-    <span class="btn btn-primary">Tambah Data Spasial</span>
+    <a href="<?=site_url('Form_spasial')?>"><span class="btn btn-primary">Tambah Data Spasial</span></a>
 </div>
 </form>
 

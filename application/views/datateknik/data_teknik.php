@@ -16,7 +16,24 @@
 					<option>KM 47+974 s/d KM48+502</option>
 				</select>
       </div>
-      <span class="btn btn-primary">Tambah Data Teknik</span>
+      <a href="<?=site_url('Form_teknik')?>"><span class="btn btn-primary">Tambah Data Teknik</span></a>
+      <div class="dropup docs-options">
+          <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
+          Format Data Teknik
+            <span class="caret"></span>
+          </button>
+        <ul class="dropdown-menu" aria-labelledby="toggleOptions" role="menu">
+          <li><button type="button" class="btn btn-link">Data Teknik 1</button></li>
+          <li><button type="button" class="btn btn-link">Data Teknik 2</button></li>
+          <li><button type="button" class="btn btn-link">Data Teknik 3</button></li>
+          <li><button type="button" class="btn btn-link">Data Teknik 4</button></li>
+          <li><button type="button" class="btn btn-link">Data Teknik 5</button></li>
+          <li><button type="button" class="btn btn-link">Data Lainnya</button></li>
+          <li><button type="button" class="btn btn-link">Lintasan Harian</button></li>
+          <li><button type="button" class="btn btn-link">Data Geometrik</button></li>
+          <li><button type="button" class="btn btn-link">Legalisasi</button></li>
+        </ul>
+      </div>
 </div>
 
 </form>
@@ -420,5 +437,39 @@
         </div>
 
 
+<!-- calendar modal -->
+    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
+          </div>
+          <div class="modal-body">
+            <div id="testmodal" style="padding: 5px 20px;">
+              <button type="button" class="btn btn-link">Data Teknik 1</button>
+              <button type="button" class="btn btn-link">Data Teknik 2</button>
+              <button type="button" class="btn btn-link">Data Teknik 3</button>
+              <button type="button" class="btn btn-link">Data Teknik 4</button>
+              <button type="button" class="btn btn-link">Data Teknik 5</button>
+              <button type="button" class="btn btn-link">Data Lainnya</button>
+              <button type="button" class="btn btn-link">Lintasan Harian</button>
+              <button type="button" class="btn btn-link">Data Geometrik</button>
+              <button type="button" class="btn btn-link">Legalisasi</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+    <!-- /calendar modal -->
 
 <?=content_close()?>

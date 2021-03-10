@@ -6,7 +6,9 @@
     <script src="<?=template('vendors/fastclick/lib/fastclick.js')?>"></script>
     <!-- NProgress -->
     <script src="<?=template('vendors/nprogress/nprogress.js')?>"></script>
+    <!-- jQuery Smart Wizard -->
+    <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="<?=template('build/js/custom.min.js')?>"></script>
 
-      <!-- Custom Theme Scripts -->
-      <script src="<?=template('build/js/custom.min.js')?>"></script>
     
