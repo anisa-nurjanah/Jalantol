@@ -1395,35 +1395,193 @@
 
                     <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Lintasan Harian</a>
+                        <a class="nav-link active" id="lintasanharian-tab" data-toggle="tab" href="#lintasanharian" role="tab" aria-controls="lintasanharian" aria-selected="true">Lintasan Harian</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Data Geometrik</a>
+                        <a class="nav-link" id="geometrik-tab" data-toggle="tab" href="#geometrik" role="tab" aria-controls="geometrik" aria-selected="false">Data Geometrik</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Data Lingkungan Jalan</a>
+                        <a class="nav-link" id="lingkunganjalan-tab" data-toggle="tab" href="#lingkunganjalan" role="tab" aria-controls="lingkunganjalan" aria-selected="false">Data Lingkungan Jalan</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Legalisasi</a>
+                        <a class="nav-link" id="legalisasi-tab" data-toggle="tab" href="#legalisasi" role="tab" aria-controls="legalisasi" aria-selected="false">Legalisasi</a>
                       </li>
                     </ul>
 
-                    <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                            synth. Cosby sweater eu banh mi, qui irure terr.
+                     <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="lintasanharian" role="tabpanel" aria-labelledby="lintasanharian-tab">
+                      <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tahun</th>
+                          <th colspan="4">2018</th>
+                        </tr>
+                        <tr>
+                          <th>Asal</th>
+                          <th colspan="4"></th>
+                        </tr> 
+                        <tr>
+                          <th>GOLONGAN</th>
+                          <th>LHR(Ki/Hr)</th>
+                          <th>Tarif (Rp)</th>
+                          <th>LHR(Ka/Hr)</th>
+                          <th>Tarif (Rp)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">GOLONGAN I (SEDAN, JIP, PICK UP, BUS)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN II (TRUK DENGAN 2 GANDAR)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN III (TRUK DENGAN 3 GANDAR)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN IV (TRUK DENGAN 4 GANDAR)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN V (TRUK DENGAN 5 GANDAR ATAU LEBIH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN VI (KENDARAAN RODA DUA)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
                       </div>
-                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                            booth letterpress, commodo enim craft beer mlkshk aliquip
-                      </div>
-                      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                            booth letterpress, commodo enim craft beer mlkshk 
-                      </div>
-                    </div>
 
+<div class="tab-pane fade" id="geometrik" role="tabpanel" aria-labelledby="geometrik-tab">
+<table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>URAIAN</th>
+                          <th>ASAL/TAHUN</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">LEBAR RUMIJA (M)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GRADIEN (%)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">CROSS FALL (%)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">SUPERELEVASI (%)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">RADIUS (%)</th>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
 
+                      </div>
+
+<div class="tab-pane fade" id="lingkunganjalan" role="tabpanel" aria-labelledby="lingkunganjalan-tab">
+<table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>URAIAN</th>
+                          <th>ASAL/TAHUN</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">TERRAIN</th>
+                        </tr><tr>
+                          <th scope="row">Kiri</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">Kanan</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">TATA GUNA LAHAN</th>
+                        </tr><tr>
+                          <th scope="row">Kiri</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">Kanan</th>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                      </div>
+
+<div class="tab-pane fade" id="legalisasi" role="tabpanel" aria-labelledby="legalisasi-tab">
+<table class="table table-bordered">
+                      <thead>
+                        <tr>
+                        <th>Tahun</th>
+                          <th colspan="3">2018</th>
+                        </tr>
+                        <tr>
+                          <th>KEGIATAN</th>
+                          <th>TGL.BLN.THN</th>
+                          <th>OLEH</th>
+                          <th>PARAF</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">DIUKUR</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DIGAMBAR</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DICATAT</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DIPERIKSA OLEH BUJT</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DISETUJUI/ DISAHKAN</th>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                          <th scope="row">DI</th>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                          <th scope="row">TGL.BLN.THN</th>
+                          <td colspan="3" ></td>
+                        </tr><tr>
+                          <th scope="row">OLEH</th>
+                          <td colspan="3"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      </div>
                     </div>
                 </div>
             </div>
