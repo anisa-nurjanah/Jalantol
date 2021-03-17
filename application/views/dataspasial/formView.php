@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 $id_atribut="";
 $nama_atribut="";
 $geojson_atribut="";
@@ -9,12 +9,12 @@ if($parameter=='ubah' && $id!=''){
     extract($row);
 }
 
-
+// value ketika validasi
 if($this->session->flashdata('error_value')){
     extract($this->session->flashdata('error_value'));
 }
 
-?> -->
+?>
 
 
 <?=content_open('Formulir Data Spasial')?>

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Form_spasial extends CI_Controller {
@@ -16,4 +16,14 @@ class Form_spasial extends CI_Controller {
 		$data['title']=$datacontent['title'];
 		$this->load->view('layouts/html',$data);
 	}
-}
+    public function form($parameter='')
+	{
+		$datacontent['url']='dataspasial';
+		$datacontent['parameter']=$parameter;
+		// $datacontent['id']=$id;
+		$datacontent['title']='Data Spasial';
+		$data['content']=$this->load->view('dataspasial/form_spasial',$datacontent,TRUE);
+		$data['title']=$datacontent['title'];
+		$this->load->view('layouts/html',$data);
+	}
+} -->

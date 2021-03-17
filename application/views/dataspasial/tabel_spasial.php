@@ -10,7 +10,7 @@
 				</select>
 
 			</div>
-    <a href="<?=site_url('Form_spasial')?>"><span class="btn btn-primary">Tambah Data Spasial</span></a>
+            <a href="<?=site_url($url.'/form/tambah')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
 </div>
 </form>
 
@@ -29,18 +29,31 @@
             </thead>
 
             <tbody>
-            <tr class="even pointer">
-                <td class="a-center">1</td>
-                <td class=" ">001</td>
-                <td class=" ">Atribut</td>
-                <td class=" ">blblbl.json</td>
-                <td class=" ">-</td>
-                <td class=" last">
-                <button type="button" class="btn btn-success btn-sm">Ubah</button>
-                <button type="button" class="btn btn-secondary btn-sm">Hapus</button>
-                
-                </td>
-            </tr>
+                <?php
+                $no=1;
+foreach ($datatable->result() as $row) {
+                ?>
+                <tr>
+                    <td class="text-center"><?=$no?></td>
+					<td><?=$row->id_atribut?></td>
+					<td><?=$row->nama_atribut?></td>
+					<td><a href="<?=assets('unggah/geojson/'.$row->geojson_atribut)?>" target="_BLANK"><?=$row->geojson_atribut?></a></td>
+					<td style="background: <?=$row->warna_atribut?>"></td>
+					<td class="text-center">
+						<div class="btn-group">
+							<a href="<?=site_url($url.'&ubah&id='.$row->id_atribut)?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
+							<a href="<?=site_url($url.'&hapus&id='.$row->id_atribut)?>" class="btn btn-danger" onclick="return confirm('Hapus data?')"><i class="fa fa-trash"></i> Hapus</a>
+						</div>
+                    </td>
+                </tr>
+                <?php
+                $no++;
+
+
+                }
+                ?>
+            </tbody>
+
         </table>
     </div>
 </div>

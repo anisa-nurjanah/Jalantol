@@ -145,3 +145,9 @@ function content_close_1(){
 </div>';
 }
 ?>
+
+<?php
+function assets($file=''){
+  return base_url('assets/'.$file);
+}
+?>
