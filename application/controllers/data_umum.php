@@ -18,11 +18,20 @@ class Data_Umum extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	
+	public function _construct(){
+		parent::_construct();
+		$this->load->model('HotspotModel','Model');
+		$this->load->model('ModelSpasial');
+	}
+	 public function index()
 	{
+		$datacontent['url']='data_umum';
 		$datacontent['ruas_tol']='BAKAUHENI - TERBANGGI BESAR';
 		$datacontent['title']='Data Umum';
 		$data['content']=$this->load->view('data_umum','$datacontent',TRUE);
+		//$data['content']=$this->load->view('data_umum/mapView','$datacontent',TRUE);
+		//$data['js']=$this->load->view('data_umum/js/mapJs','$datacontent',TRUE);
 		$data['ruas_tol']=$datacontent['ruas_tol'];
 		$this->load->view('layouts/html',$data);
 
