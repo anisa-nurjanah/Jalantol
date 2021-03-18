@@ -16,7 +16,7 @@
 					<option>KM 47+974 s/d KM48+502</option>
 				</select>
       </div>
-      <a href="<?=site_url($url.'/form/tambah')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
+      <a href="<?=site_url('Form_teknik')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
       <div class="dropup docs-options">
           <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
           Format Data Teknik
@@ -336,51 +336,1044 @@
                       <thead>
                         <tr>
                           <th>Tahun</th>
-                          <th colspan="12">2018</th>
+                          <th colspan="16">2018</th>
                         </tr>  
                         <tr>
                           <th>URAIAN</th> 
-                          <th colspan="3">KE - 1</th>
-                          <th colspan="3">KE - 2</th> 
-                          <th colspan="3">KE - 3</th>
-                          <th colspan="3">KE - 4</th> 
+                          <th colspan="4">KE - 1</th>
+                          <th colspan="4">KE - 2</th> 
+                          <th colspan="4">KE - 3</th>
+                          <th colspan="4">KE - 4</th> 
                         <tr>
                      </thead>
                      
                         <tbody>
                         <tr>
                         <th scope="row">a. GORONG GORONG</th>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
                         </tr>  
                         <tr>
                         <th scope="row">Jenis Material</th>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
                         </tr>  <tr>
                         <th scope="row">Ukuran Panjang (M)</th>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
                         </tr>  <tr>
                         <th scope="row">Kondisi</th>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                          <td colspan="3"></td>
-                        </tr>  
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                        </tr>  <tr>
+                        <th rowspan=>b. SALURAN PERMANEN</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                        </tr> <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> <th scope="row">Dalam (M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <tr>
+                        <th rowspan=>c. DRAINASE BAWAH TANAH</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> 
+                          <th rowspan=>d. MANHOLE</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> 
+                          <th rowspan=>e. R I O L</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> 
+                          <th rowspan=>f. K R A B</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> <tr>
+                        <th rowspan=>g. BANGUNAN PENAHAN TANAH</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                        </tr> <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Ukuran Pokok (BH/M) </th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Kondisi</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> 
+                        <th rowspan=>h. PENUTUP LERENG</th>
+                          <th colspan="16"></th>
+                        </tr> <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Ukuran Pokok (BH/M) </th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Kondisi</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr>
                         </tbody>
                     </table>
                       </div>
 
+<div class="tab-pane fade" id="teknik3" role="tabpanel" aria-labelledby="teknik3-tab">
 
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tahun</th>
+                          <th colspan="16">2018</th>
+                        </tr>  
+                        <tr>
+                          <th>URAIAN</th> 
+                          <th colspan="4">KE - 1</th>
+                          <th colspan="4">KE - 2</th> 
+                          <th colspan="4">KE - 3</th>
+                          <th colspan="4">KE - 4</th> 
+                        <tr>
+                     </thead>
+                     
+                        <tbody>
+                        <tr>
+                        <th scope="row">a. GORONG GORONG</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                        </tr>  
+                        <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                        </tr>  <tr>
+                        <th scope="row">Ukuran Panjang (M)</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                        </tr>  <tr>
+                        <th scope="row">Kondisi</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                        </tr>  <tr>
+                        <th rowspan=>b. SALURAN PERMANEN</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                          <th colspan="1">KI</th>
+                          <th colspan="2">MID</th>
+                          <th colspan="1">KA</th>
+                        </tr> <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> <th scope="row">Dalam (M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <tr>
+                        <th rowspan=>c. DRAINASE BAWAH TANAH</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> 
+                          <th rowspan=>d. MANHOLE</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> 
+                          <th rowspan=>e. R I O L</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> 
+                          <th rowspan=>f. K R A B</th>
+                          <td colspan="16"></td>
+                          <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Ukuran Pokok (BH/M)</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                        </tr> <th scope="row">Kondisi</th>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          <td colspan="1"></td>
+                          <td colspan="2"></td>
+                          <td colspan="1"></td>
+                          </tr> <tr>
+                        <th rowspan=>g. BANGUNAN PENAHAN TANAH</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                          <th colspan="2">KI</th>
+                          <th colspan="2">KA</th>
+                        </tr> <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Ukuran Pokok (BH/M) </th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Kondisi</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> 
+                        <th rowspan=>h. PENUTUP LERENG</th>
+                          <th colspan="16"></th>
+                        </tr> <tr>
+                        <th scope="row">Jenis Material</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Ukuran Pokok (BH/M) </th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr> <tr>
+                        <th scope="row">Kondisi</th>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                          <td colspan="2"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                      </div>
 
+<div class="tab-pane fade" id="teknik4" role="tabpanel" aria-labelledby="teknik4-tab">
 
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tahun</th>
+                          <th colspan="3">2018</th>
+                        </tr>  
+                        <tr>
+                          <th>URAIAN PERLENGKAPAN JALAN</th> 
+                          <th>KI</th>
+                          <th>MD</th> 
+                          <th>KA</th>
+                        <tr>
+                    </thead>
+                    
+                        <tbody>
+                        <tr>
+                        <th scope="row">a. PAGAR PENGAMAN</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>  
+                        <tr>
+                        <th scope="row">Guardrail (BH/M)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>  <tr>
+                        <th scope="row">Wirerope (BH/M)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>  <tr>
+                        <th scope="row">Concrete Barrier</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>  <tr>
+                        <th rowspan=>b. PAGAR BATAS OPERASIONAL (BH/M)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">c. DINDING PENGAMAN (BH/M)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>                          
+                        </tr> <tr> 
+                        <th scope="row">d. PATOK PEMANDU (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">e. PATOK KILOMETER (BH) </th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">f. PATOK HEKTOMETER (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">g. PATOK LEGER JALAN (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">h. PATOK RUMIJA (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">i. MARKA JALAN (BH/M)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          </tr> <tr>
+                        <th scope="row">j. RAMBU LALU LINTAS (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">k. RAMBU PENUNJUK ARAH (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <th scope="row">l. LAMPU LALU LINTAS (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          </tr> <tr>
+                        <th scope="row">m. LAMPU PENERANGAN (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr> 
+                        <th scope="row">n. JEMBATAN PENYEBRANGAN ORANG (BH/M)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr> 
+                        <th scope="row">o. CERMIN JALAN (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          </tr> <tr>
+                        <th scope="row">p. CCTV (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr> 
+                        <th scope="row">q. VARIABLE MESSAGE SIGN (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr> <th scope="row">r. REFLEKTOR GUARDRAIL (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          </tr> <tr>
+                        <th rowspan=>s. INFO TOL (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">t. ANTI SILAU (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        <th scope="row">u. ANTI SILAU/MATA KUCING (BH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr> <tr>
+                        </tbody>
+                    </table>
+                      </div>
+
+ <div class="tab-pane fade" id="teknik5" role="tabpanel" aria-labelledby="teknik5-tab">
+
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tahun</th>
+                          <th colspan="15">2018</th>
+                        </tr>  
+                        <tr>
+                          <th>UTILITAS PUBLIK</th> 
+                          <th colspan="5">KI</th>
+                          <th colspan="5">MD</th> 
+                          <th colspan="5">KA</th>
+                        <tr>
+                    </thead>
+                    
+                        <tbody>
+                        <tr>
+                        <th scope="row">a. PRASARANA</th>
+                          <td colspan="15"></td>
+                        </tr>  
+                        <tr>
+                        <th scope="row">Air (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr><tr>
+                        <th scope="row">Listrik (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Listrik dalam Tanah (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Telpon (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Telpon dalam Tanah (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Minyak (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Gas (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Rumah Kabel (BH)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Hidran (BH)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">b. SARANA</th>
+                          <td colspan="15"></td>
+                        </tr>  
+                        <tr>
+                        <th scope="row">Air (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr><tr>
+                        <th scope="row">Listrik (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Listrik dalam Tanah (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Telpon (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Telpon dalam Tanah (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Minyak (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Gas (BH/M)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Rumah Kabel (BH)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr> <tr>
+                        <th scope="row">Hidran (BH)</th>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                          <td colspan="5"></td>
+                        </tr>
+                        <tr>
+                          <th scope="row", rowspan="2">BANGUNAN OPERASIONAL TOL</th> 
+                          <th colspan="8">Luas</th>
+                          <th colspan="8">Nilai</th> 
+                        <tr>
+                          <th colspan="4">Lahan (M2)</th>
+                          <th colspan="4">BANG. (M2)</th>
+                          <th colspan="4">LAHAN (M2)</th>
+                          <th colspan="3">BANG. (M2)</th>
+                        </tr> </tr>
+                        <tr>
+                        <th scope="row">a. GERBANG TOL</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                        <th scope="row">b. KANTOR</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                        <th scope="row">c. TEMPAT PERISTIRAHATAN</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                        <th scope="row">d. LAINNYA</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">JUMLAH</th>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="4"></td>
+                          <td colspan="3"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                      </div>
+
+<div class="tab-pane fade" id="datalainnya" role="tabpanel" aria-labelledby="datalainnya-tab">
+
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tahun</th>
+                          <th colspan="12">2018</th>
+                        </tr>  
+                        <tr>
+                          <th>URAIAN</th> 
+                          <th colspan="6">Tanggal Pemanfaatan</th>
+                          <th colspan="6">Nilai (Rp)</th> 
+                        <tr>
+                    </thead>
+
+                        <tbody>
+                        <tr>
+                        </tr> 
+                        </tbody>
+                    </table>
+                      </div>
 
                     </div>
 
@@ -402,35 +1395,193 @@
 
                     <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Lintasan Harian</a>
+                        <a class="nav-link active" id="lintasanharian-tab" data-toggle="tab" href="#lintasanharian" role="tab" aria-controls="lintasanharian" aria-selected="true">Lintasan Harian</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Data Geometrik</a>
+                        <a class="nav-link" id="geometrik-tab" data-toggle="tab" href="#geometrik" role="tab" aria-controls="geometrik" aria-selected="false">Data Geometrik</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Data Lingkungan Jalan</a>
+                        <a class="nav-link" id="lingkunganjalan-tab" data-toggle="tab" href="#lingkunganjalan" role="tab" aria-controls="lingkunganjalan" aria-selected="false">Data Lingkungan Jalan</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Legalisasi</a>
+                        <a class="nav-link" id="legalisasi-tab" data-toggle="tab" href="#legalisasi" role="tab" aria-controls="legalisasi" aria-selected="false">Legalisasi</a>
                       </li>
                     </ul>
 
-                    <div class="tab-content" id="myTabContent">
-                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                            synth. Cosby sweater eu banh mi, qui irure terr.
+                     <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="lintasanharian" role="tabpanel" aria-labelledby="lintasanharian-tab">
+                      <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Tahun</th>
+                          <th colspan="4">2018</th>
+                        </tr>
+                        <tr>
+                          <th>Asal</th>
+                          <th colspan="4"></th>
+                        </tr> 
+                        <tr>
+                          <th>GOLONGAN</th>
+                          <th>LHR(Ki/Hr)</th>
+                          <th>Tarif (Rp)</th>
+                          <th>LHR(Ka/Hr)</th>
+                          <th>Tarif (Rp)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">GOLONGAN I (SEDAN, JIP, PICK UP, BUS)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN II (TRUK DENGAN 2 GANDAR)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN III (TRUK DENGAN 3 GANDAR)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN IV (TRUK DENGAN 4 GANDAR)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN V (TRUK DENGAN 5 GANDAR ATAU LEBIH)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GOLONGAN VI (KENDARAAN RODA DUA)</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
                       </div>
-                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                            booth letterpress, commodo enim craft beer mlkshk aliquip
-                      </div>
-                      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                            booth letterpress, commodo enim craft beer mlkshk 
-                      </div>
-                    </div>
 
+<div class="tab-pane fade" id="geometrik" role="tabpanel" aria-labelledby="geometrik-tab">
+<table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>URAIAN</th>
+                          <th>ASAL/TAHUN</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">LEBAR RUMIJA (M)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">GRADIEN (%)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">CROSS FALL (%)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">SUPERELEVASI (%)</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">RADIUS (%)</th>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
 
+                      </div>
+
+<div class="tab-pane fade" id="lingkunganjalan" role="tabpanel" aria-labelledby="lingkunganjalan-tab">
+<table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>URAIAN</th>
+                          <th>ASAL/TAHUN</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">TERRAIN</th>
+                        </tr><tr>
+                          <th scope="row">Kiri</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">Kanan</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">TATA GUNA LAHAN</th>
+                        </tr><tr>
+                          <th scope="row">Kiri</th>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">Kanan</th>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                      </div>
+
+<div class="tab-pane fade" id="legalisasi" role="tabpanel" aria-labelledby="legalisasi-tab">
+<table class="table table-bordered">
+                      <thead>
+                        <tr>
+                        <th>Tahun</th>
+                          <th colspan="3">2018</th>
+                        </tr>
+                        <tr>
+                          <th>KEGIATAN</th>
+                          <th>TGL.BLN.THN</th>
+                          <th>OLEH</th>
+                          <th>PARAF</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">DIUKUR</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DIGAMBAR</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DICATAT</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DIPERIKSA OLEH BUJT</th>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr><tr>
+                          <th scope="row">DISETUJUI/ DISAHKAN</th>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                          <th scope="row">DI</th>
+                          <td colspan="3"></td>
+                        </tr><tr>
+                          <th scope="row">TGL.BLN.THN</th>
+                          <td colspan="3" ></td>
+                        </tr><tr>
+                          <th scope="row">OLEH</th>
+                          <td colspan="3"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      </div>
                     </div>
                 </div>
             </div>
