@@ -16,7 +16,7 @@
 					<option>KM 47+974 s/d KM48+502</option>
 				</select>
       </div>
-      <a href="<?=site_url('Form_teknik')?>"><span class="btn btn-primary">Tambah Data Teknik</span></a>
+      <a href="<?=site_url($url.'/form/tambah')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
       <div class="dropup docs-options">
           <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
           Format Data Teknik

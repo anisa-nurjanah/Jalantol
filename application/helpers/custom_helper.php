@@ -2,9 +2,7 @@
 function template($a=''){
     return base_url('assets/template/gentelella/'.$a);
 }
-?>
 
-<?php
 function content_open($title=''){
     return ' 
     <div class="right_col" role="main">
@@ -20,9 +18,7 @@ function content_open($title=''){
       </div>
     <div class="clearfix"></div>';
 }
-?>
 
-<?php
 function content_welcome($admin=''){
 return ' <div class="row">
 <div class="col-md-12 col-sm-12  ">
@@ -32,9 +28,7 @@ return ' <div class="row">
 </div>
 </div>';
 }
-?>
 
-<?php
 function content_updated(){
 return ' <div class="row">
 <div class="col-md-12 col-sm-12  ">
@@ -44,9 +38,7 @@ return ' <div class="row">
 </div>
 </div>';
 }
-?>
 
-<?php
 function content_deleted(){
 return ' <div class="row">
 <div class="col-md-12 col-sm-12  ">
@@ -56,9 +48,7 @@ return ' <div class="row">
 </div>
 </div>';
 }
-?>
 
-<?php
 function content_Added(){
 return ' <div class="row">
 <div class="col-md-12 col-sm-12  ">
@@ -68,9 +58,7 @@ return ' <div class="row">
 </div>
 </div>';
 }
-?>
 
-<?php
 function content_main($title=''){
 return '
 <div class="row">
@@ -88,9 +76,7 @@ return '
       </div>
       <div class="x_content">';
 }
-?>
 
-<?php
 function content_umum($ruas_tol=''){
 return '
 <div class="row">
@@ -108,9 +94,7 @@ return '
 				<div class="clearfix">';
         
 }
-?>
 
-<?php
 function content_close(){
     return '
                 </div>
@@ -121,10 +105,7 @@ function content_close(){
 
 ';
 }
-?>
 
-
-<?php
 function content_main_1(){
 return '
 <div class="row">
@@ -132,9 +113,7 @@ return '
     <div class="x_panel">
       <div class="x_content">';
 }
-?>
 
-<?php
 function content_close_1(){
     return '
 </div>
@@ -144,10 +123,42 @@ function content_close_1(){
 </div>
 </div>';
 }
-?>
 
-<?php
 function assets($file=''){
   return base_url('assets/'.$file);
 }
-?>
+
+function upload($name='file',$types="images"){
+
+  if ($types=='images'){
+    $allowed_types='gif|jpg|png';
+    $config['max_width']            = 1024;
+    $config['max_height']           = 768;
+  }
+  elseif($types='geojson'){
+    $allowed_types='geojson';
+  }
+  
+  $CI =& get_instance();
+  $config['upload_path']          = './assets/upload/geojson/';
+  $config['allowed_types']        = $allowed_types;
+  $config['max_size']             = 1000;
+
+  $CI->load->library('upload', $config);
+
+  if ( ! $CI->upload->do_upload($name))
+  {
+    $response['info']=false;
+    $response['massage']=$CI->upload->display_errors();
+  }
+  else
+  {
+    $response['info']=true;
+    $response['massage']='Sukses di unggah';
+    $response['upload_data'] = $CI->upload->data();
+  }
+  return $response;
+}
+
+
+

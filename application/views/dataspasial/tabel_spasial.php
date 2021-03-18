@@ -13,6 +13,8 @@
             <a href="<?=site_url($url.'/form/tambah')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
 </div>
 </form>
+<hr>
+<?=$this->session->flashdata('info')?>
 
 <div class="tab-content" id="myTabContent">
     <div class="table-responsive" id="teknik1" role="tabpanel" aria-labelledby="teknik1_tab">
@@ -41,8 +43,8 @@ foreach ($datatable->result() as $row) {
 					<td style="background: <?=$row->warna_atribut?>"></td>
 					<td class="text-center">
 						<div class="btn-group">
-							<a href="<?=site_url($url.'&ubah&id='.$row->id_atribut)?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
-							<a href="<?=site_url($url.'&hapus&id='.$row->id_atribut)?>" class="btn btn-danger" onclick="return confirm('Hapus data?')"><i class="fa fa-trash"></i> Hapus</a>
+							<a href="<?=site_url($url.'/form/ubah/'.$row->id_atribut)?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
+							<a href="<?=site_url($url.'/hapus/'.$row->id_atribut)?>" class="btn btn-danger" onclick="return confirm('Hapus data?')"><i class="fa fa-trash"></i> Hapus</a>
 						</div>
                     </td>
                 </tr>
