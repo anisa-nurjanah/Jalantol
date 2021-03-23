@@ -38,6 +38,15 @@
       .icon-bar {
         background: url('assets/js/leaflet-panel-layers-master/examples/images/icons/bar.png') center center no-repeat;
     }
+    #map {
+      margin-top: 50px;
+      width: 100%;
+      height: 400px;
+    }
+    #mapid {
+      width: 100%;
+      height: 400px;
+    }
     </style>
 
   </head>

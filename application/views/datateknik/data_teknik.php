@@ -3,6 +3,9 @@
 <?=content_main('Data Teknik')?>
 <form class="form-horizontal form-label-left">
 <div class="form-group row">
+  <div class="row">
+    <div id="mapid" class="mb-3">
+  </div>
 	<label class="control-label">Nama Jalan Tol : </label>
 			<div class="col-md-3 col-sm-3 ">
 				<select class="form-control">

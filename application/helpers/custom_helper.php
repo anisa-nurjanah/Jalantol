@@ -74,7 +74,8 @@ return '
 
         <div class="clearfix"></div>
       </div>
-      <div class="x_content">';
+      
+      <div class="x_content"><div>';
 }
 
 function content_umum($ruas_tol=''){
@@ -91,7 +92,8 @@ return '
             </select>
             </li>
 					</ul>
-				<div class="clearfix">';
+				<div class="clearfix">
+        <div id="map"><div>';
         
 }
 

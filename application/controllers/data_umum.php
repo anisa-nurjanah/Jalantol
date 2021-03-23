@@ -31,8 +31,8 @@ class Data_Umum extends CI_Controller {
 		$datacontent['title']='Data Umum';
 		$datacontent['url']='data_umum';
 		$data['content']=$this->load->view('data_umum','$datacontent',TRUE);
-		//$data['content']=$this->load->view('data_umum/mapView','$datacontent',TRUE);
-		//$data['js']=$this->load->view('data_umum/js/mapJs','$datacontent',TRUE);
+		// $data['content']=$this->load->view('data_umum/mapView','$datacontent',TRUE);
+		$data['js']=$this->load->view('data_umum/js/mapJs','$datacontent',TRUE);
 		$data['ruas_tol']=$datacontent['ruas_tol'];
 		$this->load->view('layouts/html',$data);
 

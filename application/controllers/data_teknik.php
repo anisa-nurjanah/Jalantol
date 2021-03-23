@@ -23,6 +23,7 @@ class Data_teknik extends CI_Controller {
 		$datacontent['title']='Data Teknik';
 		$data['content']=$this->load->view('datateknik/data_teknik',$datacontent,TRUE);
 		$data['title']=$datacontent['title'];
+		$data['js']=$this->load->view('datateknik/js/mapJs','$datacontent',TRUE);
 		$this->load->view('layouts/html',$data);
 	}
 }
