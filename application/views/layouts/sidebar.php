@@ -36,9 +36,9 @@
 
                   <li><a><i class="fa fa-map-marker"></i> RAMP <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">Data Umum</a></li>
-                      <li><a href="form.html">Data Spasial</a></li>
-                      <li><a href="form_validation.html">Data Teknik</a></li>
+                      <li><a href="<?=site_url('Data_umum')?>">Data Umum</a></li>
+                      <li><a href="<?=site_url('Data_spasial')?>">Data Spasial</a></li>
+                      <li><a href="<?=site_url('Data_teknik')?>">Data Teknik</a></li>
                     </ul>
                   </li>
 

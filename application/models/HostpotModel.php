@@ -7,7 +7,7 @@ class HostpotModel extends CI_Model{
         return $data;
     }
 
-
+	
 	function insert($data=array()){
 		$this->db->insert('m_spasial',$data);
 		$info='<div class="alert alert-success alert-dismissible">
