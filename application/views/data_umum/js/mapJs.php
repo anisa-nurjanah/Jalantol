@@ -1,28 +1,21 @@
 <!-- Make sure you put this AFTER Leaflet's CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
 
-<script src="<?=base_url('assets/js/leaflet-panel-layers-master/src/leaflet-panel-layers.js')?>"></script>
+ <script src="<?=base_url('assets/js/leaflet-panel-layers-master/src/leaflet-panel-layers.js')?>"></script>
  <script src="<?=base_url('assets/js/leaflet.ajax.js')?>"></script>
 
-<script type="text/javascript">
 
-//map view
-var mymap = L.map('map').setView([-3.824181, 114.8191513], 10);
+   <script type="text/javascript">
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-	'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-	'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-	id: 'mapbox/streets-v11'
-}).addTo(mymap);
+   	var map = L.map('map').setView([-3.824181, 114.8191513], 10);
 
-
-var roadMutant = L.gridLayer.googleMutant({
-			maxZoom: 24,
-			type:'roadmap'
-	});
-
+   	var Layer=L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiYW5pc2FudXJqYW5haCIsImEiOiJja215YTgwcGwwMjBrMnBwazFmYWJjOGRyIn0.sqtK6gOonGEsEvxjIYzjuA'
+});
 	map.addLayer(Layer);
 
 	var myStyle2 = {
@@ -31,51 +24,38 @@ var roadMutant = L.gridLayer.googleMutant({
 	    "opacity": 0.9
 	};
 
-	function getColorAtribut(KODE){
-		for(i=0;i<dataAtribut.length;i++){
-			var data=dataAtribut[i];
-			if(data.kd_atribut==KODE){
-				return data.warna_atribut;
-			}
-		}
-	}
-
 	function popUp(f,l){
-	    var html='';
+	    var out = [];
 	    if (f.properties){
-	    	html+='<table>';
-	    	html+='<tr>';
-		    	html+='<td colspan="3"><img src="<?=base_url('assets/icon-map.png')?>" width="100%"></td>';
-	    	html+='</tr>';
-	    	html+='<tr>';
-		    	html+='<td>Provinsi</td>';
-		    	html+='<td>:</td>';
-		    	html+='<td>'+f.properties['PROVINSI']+'</td>';
-	    	html+='</tr>';
-	    	html+='<tr>';
-		    	html+='<td>Atribut</td>';
-		    	html+='<td>:</td>';
-		    	html+='<td>'+f.properties['Atribut']+'</td>';
-	    	html+='</tr>';
-	    	html+='</table>';
-	    	html+='<a href="<?=site_url('Atribut')?>" target="_BLANK">'
-	    			+'<button  class="btn btn-info btn-sm" ><i class="fa fa-info"></i> Info</button></a>';
-	        l.bindPopup(html);
-	        l.bindTooltip(f.properties['Atribut'],{
-	        	permanent:true,
-	        	direction:"center",
-	        	className:"no-background"
-	        });
+	        for(key in f.properties){
+	        	console.log(key);
+
+	        }
+			out.push("Provinsi: "+f.properties['PROVINSI']);
+			out.push("Kecamatan: "+f.properties['KECAMATAN']);
+	        l.bindPopup(out.join("<br />"));
 	    }
 	}
 
-
-// legend
+	// legend
 
 	function iconByName(name) {
 		return '<i class="icon" style="background-color:'+name+';border-radius:50%"></i>';
 	}
 
+	function featureToMarker(feature, latlng) {
+		return L.marker(latlng, {
+			icon: L.divIcon({
+				className: 'marker-'+feature.properties.amenity,
+				html: iconByName(feature.properties.amenity),
+				iconUrl: '../images/markers/'+feature.properties.amenity+'.png',
+				iconSize: [25, 41],
+				iconAnchor: [12, 41],
+				popupAnchor: [1, -34],
+				shadowSize: [41, 41]
+			})
+		});
+	}
 
 	var baseLayers = [
 		{
@@ -84,50 +64,42 @@ var roadMutant = L.gridLayer.googleMutant({
 		},
 		{	
 			name: "OpenCycleMap",
-			layer: L.tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png')
+			layer: L.tileLayer('https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=628362e8e23d40bc8bbb0b5f8a03a518')
 		},
 		{
 			name: "Outdoors",
-			layer: L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png')
-		},
-		{
-			name:'Satelite Google',
-			layer : L.gridLayer.googleMutant({
-				maxZoom: 24,
-				type:'satellite'
-			})
-		},
-		{
-			name: "Roadmap Google",
-			layer: roadMutant
+			layer: L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=628362e8e23d40bc8bbb0b5f8a03a518')
 		}
 	];
 
-	for(i=0;i<dataAtribut.length;i++){
-		var data=dataAtribut[i];
-		var layer={
-			name: data.nm_atribut,
-			icon: iconByName(data.warna_atribut),
-			layer: new L.GeoJSON.AJAX(["<?=base_url()?>assets/unggah/geojson/"+data.geojson_atribut],
-				{
-					onEachFeature:popUp,
-					style: function(feature){
-						var KODE=feature.properties.KODE;
-						return {
-							"color": getColorAtribut(KODE),
-						    "weight": 1,
-						    "opacity": 1
-						}
+	<?php
 
-					},
-				}).addTo(mymap)
-			}
-		layersAtribut.push(layer);
-	}
+		$CI =&get_instance();
+		$CI->load->model('ModelSpasial');
+		$getSpasial = $CI->ModelSpasial->get();
+		foreach($getSpasial->result() as $row) {
+			?>
+
+			var myStyle<?=$row->id_atribut?> = {
+			    "color": "<?=$row->warna_atribut?>",
+			    "weight": 1,
+			    "opacity": 1
+			};
+
+			<?php
+			$arraySpa[]='{
+			name: "'.$row->nama_atribut.'",
+			icon: iconByName("'.$row->warna_atribut.'"),
+			layer: new L.GeoJSON.AJAX(["assets/upload/geojson/'.$row->geojson_atribut.'"],{onEachFeature:popUp,style: myStyle'.$row->id_atribut.',pointToLayer: featureToMarker }).addTo(map)
+			}';
+		}
+	?>
 
 	var overLayers = [{
-		group: "Layer Atribut",
-		layers: layersAtribut
+		group: "Layer Spasial",
+		layers: [
+			<?=implode(',', $arraySpa);?>
+		]
 	}
 	];
 
@@ -135,13 +107,8 @@ var roadMutant = L.gridLayer.googleMutant({
 		collapsibleGroups: true
 	});
 
-	mymap.addControl(panelLayers);
-	mymap.addControl( new L.Control.Compass({
-		position:'topleft',
-		autoActive:true,
-		showDigit:true
-	}) );
+	map.addControl(panelLayers);
 
 
-	
-</script>
+
+   </script>

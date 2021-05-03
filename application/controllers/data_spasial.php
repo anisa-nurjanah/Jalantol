@@ -35,7 +35,6 @@ class Data_spasial extends CI_Controller {
 			$data=[
 				'id_atribut'=>$this->input->post('id_atribut'),
 				'nama_atribut'=>$this->input->post('nama_atribut'),
-				'warna_atribut'=>$this->input->post('warna_atribut'),
 			];
 
 			if($_FILES['geojson_atribut']['name']!=''){

@@ -34,25 +34,9 @@ if($this->session->flashdata('error_value')){
 <form method="post" action="<?=site_url($url.'/simpan')?>" enctype="multipart/form-data" class="form-horizontal form-label-left">
         <?=input_hidden('parameter',$parameter)?>
 <!-- <form class="form-horizontal form-label-left"> -->
-<div class="form-group row">
-	<label class="control-label col-md-3 col-sm-3 ">Kode Atribut</label>
-		<div class="col-md-9 col-sm-9 ">
-		<?=input_text('id_atribut',$id_atribut)?>
-			<!-- <select class="form-control">
-				<option>1. IDENTIFIKASI</option>
-				<option>2. RUMIJA</option>
-				<option>3. KONSTRUKSI</option>
-				<option>4. BAGIAN PERLENGKAPAN</option>
-				<option>5. PERLENGKAPAN</option>
-                <option>6. UTILITAS</option>
-                <option>7. LHR</option>
-                <option>8. GEOMETRIK JALAN</option>
-                <option>9. TAMBAHAN</option>
-			</select> -->
-		</div>
-</div>
+
 <div class="form-group row ">
-	<label class="control-label col-md-3 col-sm-3 ">Nama Atribut</label>
+	<label class="control-label col-md-3 col-sm-3 ">Jenis Atribut</label>
 	<div class="col-md-9 col-sm-9 ">
 		<?=input_text('nama_atribut',$nama_atribut)?>
 		<!-- <input type="text" class="form-control" placeholder="Nama Atribut"> -->
@@ -67,13 +51,6 @@ if($this->session->flashdata('error_value')){
             <?php endif ?>
 
 	<!-- <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" /> -->
-	</div>
-</div>
-<div class="form-group row">
-	<label class="control-label col-md-3 col-sm-3 ">Keterangan <span class="required"></span></label>
-	<div class="col-md-9 col-sm-9 ">
-		<?=input_color('warna_atribut',$warna_atribut)?>
-	    <!-- <textarea class="form-control" rows="3" placeholder="Keterangan"></textarea> -->
 	</div>
 </div>
 

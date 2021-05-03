@@ -1,0 +1,60 @@
+
+        <tr class="even pointer">
+            <td class="a-center">1</td>
+            <td class=" ">Jakarta - Bogor - Ciawi</td>
+            <td class=" ">50.00</td>
+            <td class=" ">9.00</td>
+            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
+            <td class=" ">1978</td>
+            <td class=" ">40 Tahun </td>
+            <td class=" last"><a href="#">Belum</a>
+            </td>
+        </tr>
+        
+        <tr class="odd pointer">
+            <td class="a-center">2</td>
+            <td class=" ">Semarang Seksi A,B,C</td>
+            <td class=" ">24.75</td>
+            <td class=" "> </td>
+            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
+            <td class=" ">1983</td>
+            <td class=" ">40 Tahun </td>
+            <td class=" last"><a href="#">Belum</a>
+            </td>
+        </tr>
+        
+        <tr class="even pointer">
+            <td class="a-center">3</td>
+            <td class=" ">Jakarta - Tangerang</td>
+            <td class=" ">27.00</td>
+            <td class=" ">6.00</td>
+            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
+            <td class=" ">1984</td>
+            <td class=" ">40 Tahun </td>
+            <td class=" last"><a href="#">Belum</a>
+            </td>
+        </tr>
+        
+        <tr class="odd pointer">
+            <td class="a-center">4</td>
+            <td class=" ">Prof.Dr.Ir.Soedijatmo</td>
+            <td class=" ">14.30</td>
+            <td class=" ">0.00</td>
+            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
+            <td class=" ">1985</td>
+            <td class=" ">40 Tahun </td>
+            <td class=" last"><a href="#">Belum</a>
+            </td>
+        </tr>
+
+        <tr class="even pointer">
+            <td class="a-center">41</td>
+            <td class=" ">Bakauheni - Terbanggi Besar</td>
+            <td class=" ">13.9</td>
+            <td class=" "> </td>
+            <td class=" ">PT Hutama Karya</td>
+            <td class=" ">2018</td>
+            <td class=" ">40 Tahun </td>
+            <td class=" last"><a href="<?=site_url('Data_umum')?>">Sudah</a>
+            </td>
+        </tr>

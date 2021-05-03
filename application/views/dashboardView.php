@@ -1,13 +1,13 @@
 <?=content_open('Dashboard')?>
 <?=content_welcome('John Doe')?>
-<?=content_main_1('')?>
+
 
                
           <!-- DASHBOARD CONTENT 1 -->
 
           <div class="col-md-3 col-sm-3  tile">
             <span>Jalan Tol Beroperasi</span>
-            <h2 class="value text-success">57</h2>
+            <h2 class="value text-success">64</h2>
             <h7>di Indonesia </h7>
             <span class="sparkline_one" style="height: 160px;">
                   <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
@@ -15,7 +15,7 @@
           </div>
           <div class="col-md-3 col-sm-3  tile">
             <span>Total Panjang Jalan Tol</span>
-            <h2 class="value text-success">2303,8</h2>
+            <h2 class="value text-success">1990,91</h2>
             <h7>dalam KM </h7>
             <span class="sparkline_one" style="height: 160px;">
                   <canvas width="200" height="60" style="display: inline-block; vertical-align: top; width: 94px; height: 30px;"></canvas>
@@ -39,8 +39,23 @@
           </div>
       </div>
         
+      <?=content_main_1('')?>
+
       <!-- <p>Add class <code>bulk_action</code> to table for bulk actions options on row select</p> -->
         <!-- DASHBOARD CONTENT 2 (TABEL) -->
+        
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Daftar Jalan Tol yang Beroperasi di Indonesia</h2>
+        </div>
+        <div class="col-md-6">
+            <div class="nav navbar-right panel_toolbox">
+                  <a href="<?=site_url('Form_new')?>" class="btn btn-info" ><i class="fa fa-plus"></i>Tambah Kartu Leger Jalan Tol</a>                      
+          
+        </div>
+                  </div>
+                </div>
+
         <div class="table-responsive">
         <table class="table table-striped jambo_table bulk_action">
         <thead>
@@ -52,77 +67,35 @@
             <th class="column-title">BUJT</th>
             <th class="column-title">Mulai Beroperasi</th>
             <th class="column-title">Masa Konsensi</th>
-            <th class="column-title no-link last"><span class="nobr">Terdaftar di Sistem</span>
+            <!-- <th class="column-title no-link last"><span class="nobr">Terdaftar di Sistem</span>
             </th>
             <th class="bulk-actions" colspan="7">
             <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
-            </th>
+            </th> -->
         </tr>
         </thead>
 
         <tbody>
-        <tr class="even pointer">
-            <td class="a-center">1</td>
-            <td class=" ">Jakarta - Bogor - Ciawi</td>
-            <td class=" ">50.00</td>
-            <td class=" ">9.00</td>
-            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
-            <td class=" ">1978</td>
-            <td class=" ">40 Tahun </td>
-            <td class=" last"><a href="#">Belum</a>
-            </td>
-        </tr>
-        
-        <tr class="odd pointer">
-            <td class="a-center">2</td>
-            <td class=" ">Semarang Seksi A,B,C</td>
-            <td class=" ">24.75</td>
-            <td class=" "> </td>
-            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
-            <td class=" ">1983</td>
-            <td class=" ">40 Tahun </td>
-            <td class=" last"><a href="#">Belum</a>
-            </td>
-        </tr>
-        
-        <tr class="even pointer">
-            <td class="a-center">3</td>
-            <td class=" ">Jakarta - Tangerang</td>
-            <td class=" ">27.00</td>
-            <td class=" ">6.00</td>
-            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
-            <td class=" ">1984</td>
-            <td class=" ">40 Tahun </td>
-            <td class=" last"><a href="#">Belum</a>
-            </td>
-        </tr>
-        
-        <tr class="odd pointer">
-            <td class="a-center">4</td>
-            <td class=" ">Prof.Dr.Ir.Soedijatmo</td>
-            <td class=" ">14.30</td>
-            <td class=" ">0.00</td>
-            <td class=" ">PT Jasa Marga (Persero) Tbk.</td>
-            <td class=" ">1985</td>
-            <td class=" ">40 Tahun </td>
-            <td class=" last"><a href="#">Belum</a>
-            </td>
-        </tr>
-
-        <tr class="even pointer">
-            <td class="a-center">41</td>
-            <td class=" ">Bakauheni - Terbanggi Besar</td>
-            <td class=" ">13.9</td>
-            <td class=" "> </td>
-            <td class=" ">PT Hutama Karya</td>
-            <td class=" ">2018</td>
-            <td class=" ">40 Tahun </td>
-            <td class=" last"><a href="<?=site_url('Data_umum')?>">Sudah</a>
-            </td>
-        </tr>
-
+            <?php
+            $no=1;
+            foreach ($datatable->result() as $row) {
+                ?>
+                <tr>
+                <td class="text-center"><?=$no?></td>
+                <td><?=$row->A?></td>
+                <td><?=$row->B?></td>
+                <td><?=$row->C?></td>
+                <td><?=$row->D?></td>
+                <td><?=$row->E?></td>
+                <td><?=$row->F?></td>
+                </tr>
+            <?php
+            $no++;
+            }
+            ?>
         </tbody>
         </table>
         </div>
 
 <?=content_close_1()?>
+

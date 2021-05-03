@@ -7,18 +7,10 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form>
-              <h1><i class="fa fa-map"></i> SIG JALAN TOL</h1>
+            
+              <h1><i class="fa fa-map"></i> Jalan Tol </h1>
               
-              <div class="form-group row">
-								<div class="col-md-12 col-sm-12 ">
-									<select class="select2_single form-control" tabindex="-1">
-										<option></option>
-										<option value="AK">BPJN</option>
-										<option value="HI">BPJT</option>
-										<option value="CA">BUJT</option>
-									</select>
-								</div>
-							</div>
+
 
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />

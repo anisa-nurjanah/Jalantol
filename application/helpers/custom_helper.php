@@ -11,10 +11,7 @@ function content_open($title=''){
         <div class="title_left">
           <h3>'.$title.'</h3>
         </div>  
-        <div class="nav navbar-right panel_toolbox">
-          <span class="btn btn-info">Tambah Kartu Leger Jalan Tol</span>
-          
-        </div>
+        
       </div>
     <div class="clearfix"></div>';
 }

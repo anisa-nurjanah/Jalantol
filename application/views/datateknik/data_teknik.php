@@ -3,6 +3,7 @@
 <?=content_main('Data Teknik')?>
 <form class="form-horizontal form-label-left">
 <div class="form-group row">
+<div class="col-md-12 col-sm-12 ">
   <div class="row">
     <div id="mapid" class="mb-3">
   </div>
@@ -21,22 +22,25 @@
       </div>
       <a href="<?=site_url('Form_teknik')?>" class="btn btn-success" ><i class="fa fa-plus"></i> Tambah</a>
       <div class="dropup docs-options">
-          <button type="button" class="btn btn-primary btn-block dropdown-toggle" id="toggleOptions" data-toggle="dropdown" aria-expanded="true">
-          Format Data Teknik
-            <span class="caret"></span>
-          </button>
-        <ul class="dropdown-menu" aria-labelledby="toggleOptions" role="menu">
-          <li><button type="button" class="btn btn-link">Data Teknik 1</button></li>
-          <li><button type="button" class="btn btn-link">Data Teknik 2</button></li>
-          <li><button type="button" class="btn btn-link">Data Teknik 3</button></li>
-          <li><button type="button" class="btn btn-link">Data Teknik 4</button></li>
-          <li><button type="button" class="btn btn-link">Data Teknik 5</button></li>
-          <li><button type="button" class="btn btn-link">Data Lainnya</button></li>
-          <li><button type="button" class="btn btn-link">Lintasan Harian</button></li>
-          <li><button type="button" class="btn btn-link">Data Geometrik</button></li>
-          <li><button type="button" class="btn btn-link">Legalisasi</button></li>
-        </ul>
       </div>
+</div>
+</div>
+</div>
+
+<p>Unduh FORMAT EXCEL ini untuk pengisian penambahan data teknk</p>
+
+<div class="form-group row">
+<div class="col-md-12 col-sm-12 ">
+    <button type="button" class="btn btn-link">Data Teknik 1</button>
+    <button type="button" class="btn btn-link">Data Teknik 2</button>
+    <button type="button" class="btn btn-link">Data Teknik 3</button>
+    <button type="button" class="btn btn-link">Data Teknik 4</button>
+    <button type="button" class="btn btn-link">Data Teknik 5</button>
+    <button type="button" class="btn btn-link">Data Lainnya</button>
+    <button type="button" class="btn btn-link">Lintasan Harian</button>
+    <button type="button" class="btn btn-link">Data Geometrik</button>
+    <button type="button" class="btn btn-link">Legalisasi</button>
+</div>
 </div>
 
 </form>

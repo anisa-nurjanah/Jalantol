@@ -1,42 +1,9 @@
 <?=content_open('Formulir Data Teknik')?>
 <?=content_main_1()?>
 
-                    <!-- Smart Wizard -->
-                    <p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
-                    <div id="wizard" class="form_wizard wizard_horizontal">
-                      <ul class="wizard_steps">
-                        <li>
-                          <a href="#step-1">
-                            <span class="step_no">1</span>
-                            <span class="step_descr">
-                                              Step 1<br />
-                                              <small>IDENTIFIKASI</small>
-                                          </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#step-2">
-                            <span class="step_no">2</span>
-                            <span class="step_descr">
-                                              Step 2<br />
-                                              <small>DATA TEKNIK</small>
-                                          </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#step-3">
-                            <span class="step_no">3</span>
-                            <span class="step_descr">
-                                              Step 3<br />
-                                              <small>DATA SPASIAL</small>
-                                          </span>
-                          </a>
-                        </li>
-                        
-                      </ul>
-                      <div id="step-1">
+
 								<div class="x_title">
-									<h2>IDENTIFIKASI <small>1/3</small></h2>
+									<h2>IDENTIFIKASI</h2>
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content">
@@ -194,20 +161,32 @@
 												<button class="btn btn-secondary" type="reset">Batal</button>
 										</div>
 
-                    <div class="ln_solid"></div>
-										<div class="item form-group">
-											<div class="col-md-6 col-sm-6 offset-md-5">
-                      <a href="#step-1">
-												<button type="submit" class="btn btn-success">Selanjutnya</button>
-</a>
-											</div>
-										</div>
+
 </div>
 </div>
 
-<div id="step-2">
-<span class="section">Input Formulir</span>
-<p>Input pada form ini dengan menggunakan JENIS FILE XLS. </p>
+                <div class="x_title">
+									<h2>INPUT DATA TEKNIK</h2>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+
+<p>Unduh FORMAT EXCEL ini untuk pengisian penambahan data teknk</p>
+
+<div class="form-group row">
+<div class="col-md-12 col-sm-12 ">
+    <button type="button" class="btn btn-link">Data Teknik 1</button>
+    <button type="button" class="btn btn-link">Data Teknik 2</button>
+    <button type="button" class="btn btn-link">Data Teknik 3</button>
+    <button type="button" class="btn btn-link">Data Teknik 4</button>
+    <button type="button" class="btn btn-link">Data Teknik 5</button>
+    <button type="button" class="btn btn-link">Data Lainnya</button>
+    <button type="button" class="btn btn-link">Lintasan Harian</button>
+    <button type="button" class="btn btn-link">Data Geometrik</button>
+    <button type="button" class="btn btn-link">Legalisasi</button>
+</div>
+</div>
+
 <div class="form-group row">
 	<label class="col-form-label col-md-3 col-sm-3 ">DATA TEKNIK 1</label>
 		<div class="col-md-9 col-sm-9 ">
@@ -300,5 +279,11 @@
 <div>
     <button class="btn btn-primary" type="submin">SELESAI</button>
 </div>
+<div class="ln_solid"></div>
+										<div class="item form-group">
+											<div class="col-md-6 col-sm-6 offset-md-5">
+                      <a href="<?=site_url('data_spasial/form/tambah')?>" class="btn btn-success" >Selanjutnya</a>
+											</div>
+										</div>
 
 <?=content_close_1()?>

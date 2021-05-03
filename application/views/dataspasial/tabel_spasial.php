@@ -23,9 +23,8 @@
             <tr class="headings">
                 <th>No</th>
                 <th>Kode Atribut</th>
-                <th>Nama Atribut</th>
+                <th>Jenis Atribut</th>
                 <th>GeoJSON</th>
-                <th>Keterangan</th>
                 <th>Aksi</th>
             </tr>
             </thead>
@@ -40,7 +39,6 @@ foreach ($datatable->result() as $row) {
 					<td><?=$row->id_atribut?></td>
 					<td><?=$row->nama_atribut?></td>
 					<td><a href="<?=assets('unggah/geojson/'.$row->geojson_atribut)?>" target="_BLANK"><?=$row->geojson_atribut?></a></td>
-					<td style="background: <?=$row->warna_atribut?>"></td>
 					<td class="text-center">
 						<div class="btn-group">
 							<a href="<?=site_url($url.'/form/ubah/'.$row->id_atribut)?>" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
