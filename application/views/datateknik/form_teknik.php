@@ -33,14 +33,27 @@
 </div>
 <span class="section">Input Formulir</span>
 <p>Input pada form ini dengan menggunakan JENIS FILE XLS. </p>
+
 <div class="form-group row">
-	<label class="col-form-label col-md-3 col-sm-3 ">DATA TEKNIK 1</label>
+	<label class="col-form-label col-md-3 col-sm-3 ">IDENTIFIKASI</label>
 		<div class="col-md-9 col-sm-9 ">
         <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
         <button type="submit" class="btn btn-success">Simpan</button>
 	    <button class="btn btn-secondary" type="button">Batal</button>
 		</div>
 </div>
+
+<?= form_open_multipart('data_teknik/uploaddata')?>
+<div class="form-group row">
+	<label class="col-form-label col-md-3 col-sm-3 ">DATA TEKNIK 1</label>
+		<div class="col-md-9 col-sm-9 ">
+        <input type="file"  id="importdt1" name='importdt1' accept=".xlsx, .xls" enctype="multipart/form-data"/>
+        <button type="submit" class="btn btn-success">Simpan</button>
+	    <button class="btn btn-secondary" type="button">Batal</button>
+		</div>
+</div>
+
+
 
 <div class="form-group row">
 	<label class="col-form-label col-md-3 col-sm-3 ">DATA TEKNIK 2</label>
@@ -114,14 +127,11 @@
 		</div>
 </div>
 
-<div class="form-group row">
-	<label class="col-form-label col-md-3 col-sm-3 ">LEGALISASI</label>
-		<div class="col-md-9 col-sm-9 ">
-        <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
-        <button type="submit" class="btn btn-success">Simpan</button>
-	    <button class="btn btn-secondary" type="button">Batal</button>
-		</div>
-</div>
+
+
+
+<?= form_close(); ?>
+
 <div>
     <button class="btn btn-primary" type="submin">SELESAI</button>
 </div>
