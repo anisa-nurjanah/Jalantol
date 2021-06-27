@@ -1,5 +1,6 @@
 <?=content_open('Formulir Data Teknik')?>
 <?=content_main_1()?>
+
 <div class="form-group row">
 	<label class="control-label">Nama Jalan Tol : </label>
 			<div class="col-md-3 col-sm-3 ">
@@ -47,7 +48,7 @@
 <div class="form-group row">
 	<label class="col-form-label col-md-3 col-sm-3 ">DATA TEKNIK 1</label>
 		<div class="col-md-9 col-sm-9 ">
-        <input type="file"  id="importdt1" name='importdt1' accept=".xlsx, .xls" enctype="multipart/form-data"/>
+        <input type="file"  id="importdata" name='importdata' accept=".xlsx, .xls" enctype="multipart/form-data"/>
         <button type="submit" class="btn btn-success">Simpan</button>
 	    <button class="btn btn-secondary" type="button">Batal</button>
 		</div>
@@ -58,7 +59,7 @@
 <div class="form-group row">
 	<label class="col-form-label col-md-3 col-sm-3 ">DATA TEKNIK 2</label>
 		<div class="col-md-9 col-sm-9 ">
-        <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+        <input type="file" id="importdata" name='importdata' accept=".xlsx, .xls" enctype="multipart/form-data" />
         <button type="submit" class="btn btn-success">Simpan</button>
 	    <button class="btn btn-secondary" type="button">Batal</button>
 		</div>

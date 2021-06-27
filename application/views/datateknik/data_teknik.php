@@ -218,10 +218,10 @@
                       <tr>
                           <th scope="row" rowspan="2" ><?=$row->Tipe_Lapis?></th> 
                           <th scope="row" rowspan="2" ><?=$row->Uraian?></th> 
-                          <th><?=$row->KI_Jalur_1?></th>
-                          <th><?=$row->KI_Jalur_2?></th>
-                          <th><?=$row->KA_Jalur_1?></th>
-                          <th><?=$row->KA_Jalur_2?></th>
+                          <th colspan="2"><?=$row->KI_Jalur_1?></th>
+                          <th colspan="2"><?=$row->KI_Jalur_2?></th>
+                          <th colspan="2"><?=$row->KA_Jalur_1?></th>
+                          <th colspan="2"><?=$row->KA_Jalur_2?></th>
                         </tr>
                         <?php
                         }

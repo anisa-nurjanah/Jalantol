@@ -56,7 +56,7 @@ class Data_teknik extends CI_Controller {
 		$this->load->library('upload',$config);
 
 	
-		if($this->upload->do_upload('importdt1')){
+		if($this->upload->do_upload('importdata')){
 			$file = $this->upload->data();
 			$reader = ReaderEntityFactory :: createXLSXReader();
 
@@ -72,6 +72,15 @@ class Data_teknik extends CI_Controller {
 							'Nilai_Perolehan' => $row->getCellAtIndex(4),
 						);
 					$this->Model->import_data($teknik1);
+						$teknik2_lapis = array(
+							'Tipe_Lapis' => $row->getCellAtIndex(1),
+							'Uraian' => $row->getCellAtIndex(2),
+							'KI_Jalur_1' => $row->getCellAtIndex(3),
+							'KI_Jalur_2' => $row->getCellAtIndex(4),
+							'KA_Jalur_1' => $row->getCellAtIndex(5),
+							'KA_Jalur_2' => $row->getCellAtIndex(6),
+						);
+					$this->Model->import_data2($teknik2_lapis);
 					}
 					$numRow++;
 				}
