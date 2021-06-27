@@ -28,13 +28,6 @@ class ModelTeknik extends CI_Model{
         $data2_lapis = $this->db->get('data2_lapis');
         return $data2_lapis;
     }
-    function import_data2($teknik2_lapis){
-        $jumlah = count($teknik2_lapis);
-        if($jumlah > 0){
-            $this->db->replace('data2_lapis',$teknik2_lapis);
-            $this->db->replace('data2_lapis',$teknik2_lapis);
-        }
-    }
     function get_data2_median(){
         $data2_median = $this->db->get('data2_median');
         return $data2_median;
@@ -84,4 +77,3 @@ class ModelTeknik extends CI_Model{
         return $datalingkunganjalan2;
     }
 }
-?>
