@@ -30,6 +30,14 @@ if ($this->session->userdata('level') == 2) {
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
+                        <div class ="float-left">
+                        <!-- <label class="control-label">Nama Jalan Tol : </label> -->
+                                        <!-- <div class="col-md-4 col-sm-4"> -->
+                                            <select class="form-control">
+                                                <option>BAKAUHENI - TERBANGGI BESAR</option>
+                                            </select>
+                                        <!-- </div> -->
+                        </div>
                             <div class="float-right">
                                 <a href="javascript:void(0)" data-toggle="modal" data-target="#tambahDataSpasial" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a>
                             </div>

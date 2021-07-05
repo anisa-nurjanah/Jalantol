@@ -44,8 +44,16 @@ if ($this->session->userdata('level') == 2) {
 					<div class="card">
 						<div class="card-header">
 							<h3 class="card-title">
-								<i class="fas fa-map mr-1"></i>
-								RUAS BAKAUHENI - TERBANGGI BESAR
+								<!-- <i class="fas fa-map mr-1"></i> -->
+								
+								<!-- RUAS BAKAUHENI - TERBANGGI BESAR -->
+
+								<!-- <label class="control-label">Nama Jalan Tol : </label> -->
+                                        <!-- <div class="col-md-4 col-sm-4"> -->
+                                            <select class="form-control">
+                                                <option>BAKAUHENI - TERBANGGI BESAR</option>
+                                            </select>
+                                        <!-- </div> -->
 							</h3>
 							<div class="float-right">
 								<a href="<?= site_url('Form_new') ?>" class="btn btn-info"><i class="fa fa-plus"></i>Tambah Kartu Leger Jalan Tol</a>

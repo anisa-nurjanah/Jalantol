@@ -46,10 +46,10 @@ if ($this->session->userdata('level') == 2) {
                                             <label for="ruas">Ruas</label>
                                             <input type="text" name="ruas" class="form-control" id="ruas" placeholder="Masukkan Ruas" required>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="ruas_km">Ruas KM</label>
                                             <input type="text" name="ruas_km" class="form-control" id="ruas_km" placeholder="Masukkan Ruas KM" required>
-                                        </div>
+                                        </div> -->
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="seksi_ruas">Seksi Ruas</label>

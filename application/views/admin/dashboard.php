@@ -38,10 +38,10 @@ if ($this->session->userdata('level')) {
 
                             <p>Jalan Tol Beroperasi <br> di Indonesia </p>
                         </div>
-                        <div class="icon">
+                        <!-- <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- ./col -->
@@ -55,10 +55,10 @@ if ($this->session->userdata('level')) {
 
                             <p>Total Panjang <br> Jalan Tol</p>
                         </div>
-                        <div class="icon">
+                        <!-- <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- ./col -->
@@ -72,10 +72,10 @@ if ($this->session->userdata('level')) {
 
                             <p>Total Jalan Tol <br> Terdaftar di Sistem</p>
                         </div>
-                        <div class="icon">
+                        <!-- <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- ./col -->
@@ -89,10 +89,10 @@ if ($this->session->userdata('level')) {
 
                             <p>Total Data Leger <br> Jalan Tol</p>
                         </div>
-                        <div class="icon">
+                        <!-- <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
                     </div>
                 </div>
                 <!-- ./col -->
