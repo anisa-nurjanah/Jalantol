@@ -50,7 +50,7 @@ if ($this->session->userdata('level')) {
                     <div class="small-box bg-success">
                         <div class="inner">
                             <h3>
-                                1990,91
+                                2303,8
                             </h3>
 
                             <p>Total Panjang <br> Jalan Tol</p>

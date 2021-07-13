@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "gerbang point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "layer": "GERBANG TOL GUNUNG SUGIH" }, "geometry": { "type": "Point", "coordinates": [ 105.222226242928684, -4.959194412532152 ] } },
+{ "type": "Feature", "properties": { "id": 2, "layer": "GERBANG TOL TERBANGGI BESAR" }, "geometry": { "type": "Point", "coordinates": [ 105.225199238979982, -4.881858168760485 ] } }
+]
+}

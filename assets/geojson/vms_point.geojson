@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "vms point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "layer": "AK_VMS" }, "geometry": { "type": "Point", "coordinates": [ 105.206120126308988, -5.146671546997295 ] } },
+{ "type": "Feature", "properties": { "id": 2, "layer": "AK_VMS" }, "geometry": { "type": "Point", "coordinates": [ 105.217275560487636, -4.9592578620938 ] } },
+{ "type": "Feature", "properties": { "id": 3, "layer": "AK_VMS" }, "geometry": { "type": "Point", "coordinates": [ 105.221778082951317, -4.883784178331728 ] } }
+]
+}

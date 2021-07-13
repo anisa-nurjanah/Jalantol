@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"name": "patok LJ point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "layer": "PATOK LJ", "keterangan": "LJ HKBT 30", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.207289549094199, -5.115754630660618 ] } },
+{ "type": "Feature", "properties": { "id": 2, "layer": "PATOK LJ", "keterangan": "LJ HKBT 31", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.213074830788429, -5.070775444762246 ] } },
+{ "type": "Feature", "properties": { "id": 3, "layer": "PATOK LJ", "keterangan": "LJ HKBT 32", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.226508648998859, -5.024764115970752 ] } },
+{ "type": "Feature", "properties": { "id": 4, "layer": "PATOK LJ", "keterangan": "LJ HKBT 33", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.228945886695115, -4.990591906761794 ] } },
+{ "type": "Feature", "properties": { "id": 5, "layer": "PATOK LJ", "keterangan": "LJ HKBT 34", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.228721020656636, -4.959148621926793 ] } },
+{ "type": "Feature", "properties": { "id": 6, "layer": "PATOK LJ", "keterangan": "LJ HKBT 34 A", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.216293083839247, -4.959821067445883 ] } },
+{ "type": "Feature", "properties": { "id": 7, "layer": "PATOK LJ", "keterangan": "LJ HKBT 35", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.223500457868084, -4.920417842896746 ] } },
+{ "type": "Feature", "properties": { "id": 8, "layer": "PATOK LJ", "keterangan": "LJ HKBT 36 A", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.221039190641036, -4.883434281187311 ] } },
+{ "type": "Feature", "properties": { "id": 9, "layer": "PATOK LJ", "keterangan": "LJ HKBT 36", "deskripsi": null }, "geometry": { "type": "Point", "coordinates": [ 105.229116665402373, -4.881249943709855 ] } }
+]
+}

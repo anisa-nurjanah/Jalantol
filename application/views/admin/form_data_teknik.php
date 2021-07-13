@@ -43,6 +43,7 @@ if ($this->session->userdata('level') == 2) {
                                 <div class="row">
                                     <div class="col-md-8">
                                         <div class="form-group">
+                                            
                                             <label for="ruas">Ruas</label>
                                             <input type="text" name="ruas" class="form-control" id="ruas" placeholder="Masukkan Ruas" required>
                                         </div>
@@ -98,7 +99,7 @@ if ($this->session->userdata('level') == 2) {
                                         <div id="map"></div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="form-group col-md-3">
                                         <label for="sta_awal">STA Awal</label>
                                         <input type="text" name="sta_awal" class="form-control" id="sta_awal" placeholder="Masukkan STA Awal" required>
@@ -118,9 +119,9 @@ if ($this->session->userdata('level') == 2) {
                                     <div class="form-group col-md-3">
                                         <label for="deskripsi_awal">Deskripsi Awal</label>
                                         <input type="text" name="deskripsi_awal" class="form-control" id="deskripsi_awal" placeholder="Masukkan Deskripsi Awal" required>
-                                    </div>
-                                </div>
-                                <div class="row">
+                                    </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="row">
                                     <div class="form-group col-md-3">
                                         <label for="sta_akhir">STA Akhir</label>
                                         <input type="text" name="sta_akhir" class="form-control" id="sta_akhir" placeholder="Masukkan STA Akhir" required>
@@ -141,7 +142,7 @@ if ($this->session->userdata('level') == 2) {
                                         <label for="deskripsi_akhir">Deskripsi Akhir</label>
                                         <input type="text" name="deskripsi_akhir" class="form-control" id="deskripsi_akhir" placeholder="Masukkan Deskripsi Akhir" required>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- /.card-body -->
                                 <div class="card-footer">
                                     <button class="btn btn-primary" type="submit">Simpan</button>
@@ -164,7 +165,7 @@ if ($this->session->userdata('level') == 2) {
                                 <!-- <li>Untuk data Kelas, hanya bisa diisi menggunakan Kode Kelas. <a data-toggle="modal" href="#kelasId" style="text-decoration:none" class="btn btn-xs btn-primary">Lihat Kode</a>.</li> -->
                             </ul>
                             <div class="text-center">
-                                <a href="<?= base_url('template_excel/SELURUH DATA.xlsx') ?>" class="btn btn-success"><i class="fa fa-file-download"></i> Download Format</a>
+                                <a href="<?= base_url('template_excel/Template Data Teknik.xlsx') ?>" class="btn btn-success"><i class="fa fa-file-download"></i> Download Format</a>
                             </div>
                             <?= form_open_multipart('jalantol/upload_excel'); ?>
                             <?php echo $this->session->flashdata('notif') ?>

@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "LL point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "layer": "T_LAMPU_LL", "absis_x": 525376.71950899996, "ordinat_y": 9460228.47707 }, "geometry": { "type": "Point", "coordinates": [ 105.228878842366768, -4.883324687229521 ] } },
+{ "type": "Feature", "properties": { "id": 2, "layer": "T_LAMPU_LL", "absis_x": 523389.5209, "ordinat_y": 9437087.063 }, "geometry": { "type": "Point", "coordinates": [ 105.211022735302762, -5.092680869128626 ] } },
+{ "type": "Feature", "properties": { "id": 3, "layer": "T_LAMPU_LL", "absis_x": 525123.47659099998, "ordinat_y": 9451867.3341199998 }, "geometry": { "type": "Point", "coordinates": [ 105.226620381788422, -4.958965160126255 ] } },
+{ "type": "Feature", "properties": { "id": 4, "layer": "T_LAMPU_LL", "absis_x": 523969.44033200003, "ordinat_y": 9451831.0427000001 }, "geometry": { "type": "Point", "coordinates": [ 105.216210828611949, -4.959296960440153 ] } },
+{ "type": "Feature", "properties": { "id": 5, "layer": "T_LAMPU_LL", "absis_x": 523972.92861, "ordinat_y": 9451814.04954 }, "geometry": { "type": "Point", "coordinates": [ 105.216242343687725, -4.959450680036011 ] } },
+{ "type": "Feature", "properties": { "id": 6, "layer": "T_LAMPU_LL", "absis_x": 525272.429825, "ordinat_y": 9451619.4942499995 }, "geometry": { "type": "Point", "coordinates": [ 105.227964741121951, -4.961206796880151 ] } },
+{ "type": "Feature", "properties": { "id": 7, "layer": "T_LAMPU_LL", "absis_x": 525285.57415700005, "ordinat_y": 9452023.0275400002 }, "geometry": { "type": "Point", "coordinates": [ 105.228082053562531, -4.957556166799663 ] } },
+{ "type": "Feature", "properties": { "id": 8, "layer": "T_LAMPU_LL", "absis_x": 525530.217, "ordinat_y": 9460584.725 }, "geometry": { "type": "Point", "coordinates": [ 105.230262167390137, -4.880101387427502 ] } },
+{ "type": "Feature", "properties": { "id": 9, "layer": "T_LAMPU_LL", "absis_x": 524484.56535699998, "ordinat_y": 9460197.5145399999 }, "geometry": { "type": "Point", "coordinates": [ 105.220832418536773, -4.883607488879587 ] } },
+{ "type": "Feature", "properties": { "id": 10, "layer": "T_LAMPU_LL", "absis_x": 524486.19415999996, "ordinat_y": 9460211.5261599999 }, "geometry": { "type": "Point", "coordinates": [ 105.220847067581033, -4.883480726665937 ] } },
+{ "type": "Feature", "properties": { "id": 11, "layer": "T_LAMPU_LL", "absis_x": 525324.75082399999, "ordinat_y": 9460505.4945400003 }, "geometry": { "type": "Point", "coordinates": [ 105.228409278932773, -4.88081878531967 ] } },
+{ "type": "Feature", "properties": { "id": 12, "layer": "T_LAMPU_LL", "absis_x": 522824.88522300002, "ordinat_y": 9430405.2236000001 }, "geometry": { "type": "Point", "coordinates": [ 105.205947903723157, -5.153129983019483 ] } }
+]
+}
