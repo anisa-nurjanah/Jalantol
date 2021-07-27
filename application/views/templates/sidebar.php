@@ -29,7 +29,7 @@
                         <a href="#" class="nav-link<?= $this->uri->segment(1) == 'dataumum' || $this->uri->segment(1) == 'dataspasial' || $this->uri->segment(1) == 'datateknik' || $this->uri->segment(1) == 'Form_new' ? ' active' : '' ?>">
                             <i class="nav-icon fas fa-list"></i>
                             <p>
-                                Kartu Leger Jalan Tol
+                                MAINROAD
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>

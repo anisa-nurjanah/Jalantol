@@ -30,7 +30,7 @@ if ($this->session->userdata('level')) {
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
@@ -45,7 +45,7 @@ if ($this->session->userdata('level')) {
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
@@ -62,7 +62,7 @@ if ($this->session->userdata('level')) {
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
@@ -79,22 +79,22 @@ if ($this->session->userdata('level')) {
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <!-- <div class="col-lg-3 col-6"> -->
                     <!-- small box -->
-                    <div class="small-box bg-primary">
+                    <!-- <div class="small-box bg-primary">
                         <div class="inner">
                             <h3>
                                 1
                             </h3>
 
                             <p>Total Data Leger <br> Jalan Tol</p>
-                        </div>
+                        </div> -->
                         <!-- <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
                         <a href="<?= base_url('datalks') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-                    </div>
-                </div>
+                    <!-- </div>
+                </div> -->
                 <!-- ./col -->
             </div>
             <!-- /.row -->
@@ -118,6 +118,7 @@ if ($this->session->userdata('level')) {
                                         <th class="column-title">BUJT</th>
                                         <th class="column-title">Mulai Beroperasi</th>
                                         <th class="column-title">Masa Konsensi</th>
+                                        <th class="column-title">Keterangan Data</th>
                                     </tr>
                                 </thead>
                                 <tbody>
