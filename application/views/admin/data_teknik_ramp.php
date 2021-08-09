@@ -177,18 +177,18 @@ if ($this->session->userdata('level') == 2) {
                                                                 <th scope="row" rowspan="2">DESA</th>
                                                                 <th scope="row" rowspan="2">Aksi</th>
                                                             </tr>
-                                                            <tr>
-                                                                <th colspan="1">STA AWAL</th>
-                                                                <th colspan="1">STA AKHIR</th>
-                                                                <th colspan="1">X</th>
-                                                                <th colspan="1">Y</th>
-                                                                <th colspan="1">Z</th>
-                                                                <th colspan="1">Deskripsi Awal</th>
-                                                                <th colspan="1">X</th>
-                                                                <th colspan="1">Y</th>
-                                                                <th colspan="1">Z</th>
-                                                                <th colspan="1">Deskripsi Akhir</th>
-                                                            </tr>
+                                                            <!-- <tr> -->
+                                                                <!-- <th colspan="1">STA AWAL</th> -->
+                                                                <!-- <th colspan="1">STA AKHIR</th> -->
+                                                                <!-- <th colspan="1">X</th> -->
+                                                                <!-- <th colspan="1">Y</th> -->
+                                                                <!-- <th colspan="1">Z</th> -->
+                                                                <!-- <th colspan="1">Deskripsi Awal</th> -->
+                                                                <!-- <th colspan="1">X</th> -->
+                                                                <!-- <th colspan="1">Y</th> -->
+                                                                <!-- <th colspan="1">Z</th> -->
+                                                                <!-- <th colspan="1">Deskripsi Akhir</th> -->
+                                                            <!-- </tr> -->
                                                         </thead>
                                                         <tbody>
                                                         </tbody>
@@ -668,12 +668,12 @@ if ($this->session->userdata('level') == 2) {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-md-3">
+                    <!-- <div class="row"> -->
+                        <!-- <div class="form-group col-md-3">
                             <label for="sta_awal">STA Awal</label>
                             <input type="text" name="sta_awal" class="form-control" id="sta_awal" placeholder="Masukkan STA Awal" required>
-                        </div>
-                        <div class="form-group col-md-2">
+                        </div> -->
+                        <!-- <div class="form-group col-md-2">
                             <label for="x_awal">X Awal</label>
                             <input type="text" name="x_awal" class="form-control" id="x_awal" placeholder="Masukkan X Awal" required>
                         </div>
@@ -689,8 +689,8 @@ if ($this->session->userdata('level') == 2) {
                             <label for="deskripsi_awal">Deskripsi Awal</label>
                             <input type="text" name="deskripsi_awal" class="form-control" id="deskripsi_awal" placeholder="Masukkan Deskripsi Awal" required>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div> -->
+                    <!-- <div class="row">
                         <div class="form-group col-md-3">
                             <label for="sta_akhir">STA Akhir</label>
                             <input type="text" name="sta_akhir" class="form-control" id="sta_akhir" placeholder="Masukkan STA Akhir" required>
@@ -710,8 +710,8 @@ if ($this->session->userdata('level') == 2) {
                         <div class="form-group col-md-3">
                             <label for="deskripsi_akhir">Deskripsi Akhir</label>
                             <input type="text" name="deskripsi_akhir" class="form-control" id="deskripsi_akhir" placeholder="Masukkan Deskripsi Akhir" required>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
