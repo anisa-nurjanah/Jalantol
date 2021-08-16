@@ -711,6 +711,7 @@ if ($this->session->userdata('level') == 2) {
                             <label for="deskripsi_akhir">Deskripsi Akhir</label>
                             <input type="text" name="deskripsi_akhir" class="form-control" id="deskripsi_akhir" placeholder="Masukkan Deskripsi Akhir" required>
                         </div> -->
+                        
                     <!-- </div> -->
                 </div>
                 <div class="modal-footer">
