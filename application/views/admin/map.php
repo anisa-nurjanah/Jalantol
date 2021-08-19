@@ -95,7 +95,7 @@
     $CI->db->join('batasan_data', 'batasan_data.kode_atribut=m_spasial.nama_atribut');
     $CI->db->where(['jenis_page' => "ledger"]);
     $CI->db->where(['nama_atribut_batasan' => $where]);
-    $CI->db->group_by('geojson_atribut');
+    $CI->db->group_by('id_atribut, nama_atribut, batasan_data.nama_atribut_batasan, geojson_atribut, nama_spasial, jenis_page');
     $getSpasial = $CI->db->get();
     foreach ($getSpasial->result() as $row) {
     ?>

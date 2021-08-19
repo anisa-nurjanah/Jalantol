@@ -47,7 +47,7 @@ class Ramp extends CI_Controller
         $this->datatables->from('m_spasial');
         $this->datatables->join('batasan_data', 'batasan_data.kode_atribut=m_spasial.nama_atribut');
         $this->db->where(['jenis_page' => "ramp"]);
-        $this->datatables->group_by('geojson_atribut');
+        $this->datatables->group_by('id_atribut, nama_atribut, batasan_data.nama_atribut_batasan, geojson_atribut, nama_spasial, jenis_page,batasan_data.kode_atribut,batasan_data.id_batasan_data, batasan_data.nama_atribut_batasan, batasan_data.nama_spasial_batasan, batasan_data.data_teknik, batasan_data.created_at_batasan,batasan_data.data_spasial');
         $this->datatables->add_column(
             'aksi',
             '<span data-toggle="tooltip" data-placement="top" title="Edit Data Spasial"><a href="javascript:void(0);" class="edit_record btn btn-sm btn-primary" data-id="$1" data-backdrop="static" data-keyboard="false">

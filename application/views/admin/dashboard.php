@@ -106,6 +106,7 @@ if ($this->session->userdata('level')) {
                                 <i class="fas fa-table mr-1"></i>
                                 Daftar Jalan Tol yang Beroperasi di Indonesia
                             </h3>
+                       
                         </div>
                         <div class="card-body table-responsive">
                             <table class="table table-hover table-bordered" id="mytableJalanTol" width="100%" cellspacing="0">
@@ -122,6 +123,27 @@ if ($this->session->userdata('level')) {
                                     </tr>
                                 </thead>
                                 <tbody>
+                                        <?php
+                                        $no = 1;
+                                        foreach($dataTol as $tol):
+                                        
+                                        ?>
+                                        
+                    <tr>
+
+                        <td><?= $no++; ?></td>
+                        <td><?= $tol['nama_jt'] ?></td>
+                        <td><?= $tol['jl_utama'] ?></td>
+                        <td><?= $tol['jl_akses'] ?></td>
+                        <td><?= $tol['bujt'] ?></td>
+                        <td><?= $tol['thn_operasi'] ?></td>
+                        <td><?= $tol['ms_konsesi'] ?></td>
+                        <td></td>
+
+                    </tr>
+                    <?php
+                endforeach;
+                ?>
                                 </tbody>
                             </table>
                         </div>

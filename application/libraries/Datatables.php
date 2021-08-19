@@ -444,7 +444,8 @@ class Datatables
         $countingsql = "SELECT COUNT(*) FROM (" . $subquery . ") SqueryAux";
         $query = $this->ci->db->query($countingsql);
         $result = $query->row_array();
-        $count = $result['COUNT(*)'];
+        
+        $count = $result['count'];
         return $count;
     }
 

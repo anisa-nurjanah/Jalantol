@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Main extends CI_Controller
 {
+	public function __construct() {
+		parent::__construct();
+
+		$this->load->model('ModelSpasial');
+ }
 
 	public function index()
 	{
@@ -12,12 +17,16 @@ class Main extends CI_Controller
 
 	public function dashboard()
 	{
+		
+		$data['dataTol'] = $this->ModelSpasial->datajalanTol();
+
 		$data['judul'] = "Dashboard";
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar');
 		$this->load->view('templates/sidebar');
 		$this->load->view('admin/dashboard', $data);
 		$this->load->view('templates/footer');
+
 	}
 
 	public function logout()
