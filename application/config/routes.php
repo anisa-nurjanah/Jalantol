@@ -63,3 +63,4 @@ $route['dataumum_ramp'] = 'Ramp/dataumum/';
 $route['dataspasial_ramp'] = 'Ramp/dataspasial/';
 $route['datateknik_ramp'] = 'Ramp/datateknik/';
 $route['Form_new_ramp'] = 'Ramp/Form_new/';
+$route['identifikasi']['post']= 'Jalantol/get_identifikasi';

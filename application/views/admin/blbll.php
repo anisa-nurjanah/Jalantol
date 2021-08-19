@@ -1454,6 +1454,5 @@ if ($this->session->userdata('level') == 2) {
 
     <?php
     $data['where'] = "Identifikasi";
-    $this->load->view('admin/map', $data)
-     ?>
+    $this->load->view('admin/map', $data) ?>
 </div>

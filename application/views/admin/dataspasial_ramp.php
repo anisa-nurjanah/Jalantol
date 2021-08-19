@@ -85,7 +85,7 @@ if ($this->session->userdata('level') == 2) {
                         </div>
                     </div>
                     <?php
-                    $this->db->select('*');
+                    $this->db->select('kode_atribut');
                     $this->db->from('batasan_data');
                     $this->db->group_by('kode_atribut');
                     $this->db->order_by('kode_atribut', 'asc');

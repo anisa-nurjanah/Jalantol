@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class ModelSpasial extends CI_Model
 {
+
+	function datajalanTol(){
+		$data = $this->db->get('daftar_tol')->result_array();
+		return $data;
+
+	}
 	function get()
 	{
 		$data = $this->db->get('m_spasial');
