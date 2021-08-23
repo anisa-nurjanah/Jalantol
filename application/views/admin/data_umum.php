@@ -50,10 +50,19 @@ if ($this->session->userdata('level') == 2) {
 
 								<!-- <label class="control-label">Nama Jalan Tol : </label> -->
                                         <!-- <div class="col-md-4 col-sm-4"> -->
-                                            <select class="form-control">
-                                                <option>BAKAUHENI - TERBANGGI BESAR</option>
+										<div class="col-6">
+                                            <select class="form-control ">
+												<?php
+													foreach($dataTol as $tol):
+												?>    
+													<?php if ($tol['keterangan_tol'] === 't'): ?>
+														<option><?= $tol['nama_jt'] ?></option> 
+													<?php endif; ?>        
+												<?php
+													endforeach;
+												?>
                                             </select>
-                                        <!-- </div> -->
+                                        </div>
 							</h3>
 							<div class="float-right">
 								<a href="<?= site_url('Form_new') ?>" class="btn btn-info"><i class="fa fa-plus"></i>Tambah Kartu Leger Jalan Tol</a>

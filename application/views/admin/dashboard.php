@@ -34,7 +34,12 @@ if ($this->session->userdata('level')) {
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>64</h3>
+                            <h3>
+                            <?php 
+                                    echo count($dataTol);
+                                ?>
+
+                            </h3>
 
                             <p>Jalan Tol Beroperasi <br> di Indonesia </p>
                         </div>
@@ -50,7 +55,13 @@ if ($this->session->userdata('level')) {
                     <div class="small-box bg-success">
                         <div class="inner">
                             <h3>
-                                2303,8
+                                <!-- 2303,8 -->
+                                <?php $count = 0;
+                                    foreach($dataTol as $tol) :
+                                        $count += $tol['jl_utama'];
+                                    endforeach;
+                                    echo $count;
+                                ?>
                             </h3>
 
                             <p>Total Panjang <br> Jalan Tol</p>
@@ -67,7 +78,12 @@ if ($this->session->userdata('level')) {
                     <div class="small-box bg-warning">
                         <div class="inner">
                             <h3>
-                                1
+                                <?php $count = 0;
+                                    foreach($dataTol as $tol) :
+                                        $tol['keterangan_tol'] == 't' ? $count++ : null;
+                                    endforeach;
+                                    echo $count;
+                                ?>
                             </h3>
 
                             <p>Total Jalan Tol <br> Terdaftar di Sistem</p>
@@ -123,27 +139,24 @@ if ($this->session->userdata('level')) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <?php
+                                    <?php
                                         $no = 1;
                                         foreach($dataTol as $tol):
                                         
-                                        ?>
-                                        
-                    <tr>
-
-                        <td><?= $no++; ?></td>
-                        <td><?= $tol['nama_jt'] ?></td>
-                        <td><?= $tol['jl_utama'] ?></td>
-                        <td><?= $tol['jl_akses'] ?></td>
-                        <td><?= $tol['bujt'] ?></td>
-                        <td><?= $tol['thn_operasi'] ?></td>
-                        <td><?= $tol['ms_konsesi'] ?></td>
-                        <td></td>
-
-                    </tr>
-                    <?php
-                endforeach;
-                ?>
+                                    ?>                   
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $tol['nama_jt'] ?></td>
+                                        <td><?= $tol['jl_utama'] ?></td>
+                                        <td><?= $tol['jl_akses'] ?></td>
+                                        <td><?= $tol['bujt'] ?></td>
+                                        <td><?= $tol['thn_operasi'] ?></td>
+                                        <td><?= $tol['ms_konsesi'] ?></td>
+                                        <td><?= $tol['keterangan_tol'] == 'f' ? "Belum terdaftar di sistem" : "Sudah terdaftar di sistem"?></td>
+                                    </tr>
+                                    <?php
+                                        endforeach;
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

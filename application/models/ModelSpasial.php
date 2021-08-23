@@ -3,11 +3,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class ModelSpasial extends CI_Model
 {
-
+	
 	function datajalanTol(){
-		$data = $this->db->get('daftar_tol')->result_array();
+		$data = $this->db->order_by("keterangan_tol", "desc")->get('daftar_tol')->result_array();
 		return $data;
+	}
 
+	function batasan(){
+		
+		$this->db->select('nama_atribut_batasan');
+		$this->db->distinct();
+		$this->db->from('batasan_data');
+		$data = $this->db->get();
+		
+		return $data->result_array();
 	}
 	function get()
 	{
@@ -56,4 +65,15 @@ class ModelSpasial extends CI_Model
 	            <h4><i class="icon fa fa-check"></i> Sukses!</h4> Data Sukses dihapus </div>';
 		$this->session->set_flashdata('info', $info);
 	}
+
+	// public function get_daftartol() {
+	// 	$this -> db -> select('nama_jt');
+	// 	$result = $this -> db -> get('daftar_tol');
+	// 	if ($result -> num_rows() > 0) {
+	// 	   return $result->result_array();
+	// 	}
+	// 	else {
+	// 	  return false;
+	// 	} 
+	// }
 }

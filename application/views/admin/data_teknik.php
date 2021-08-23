@@ -109,7 +109,15 @@ if ($this->session->userdata('level') == 2) {
                                         <label class="control-label">Nama Jalan Tol : </label>
                                         <div class="col-md-4 col-sm-4">
                                             <select class="form-control">
-                                                <option>BAKAUHENI - TERBANGGI BESAR</option>
+                                                <?php
+													foreach($dataTol as $tol):
+												?>    
+													<?php if ($tol['keterangan_tol'] === 't'): ?>
+														<option value="<?= $tol['id_daftar'] ?>" ><?= $tol['nama_jt'] ?></option> 
+													<?php endif; ?>        
+												<?php
+													endforeach;
+												?>
                                             </select>
                                         </div>
 
