@@ -92,11 +92,16 @@ if ($this->session->userdata('level') == 2) {
 
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script src="<?= base_url() ?>assets/js/leaflet-providers-master/leaflet-providers.js"></script> -->
+<script src="<?= base_url() ?>assets/js/proj4leaflet_raw.js"></script>
 <script src="<?= base_url() ?>assets/js/leaflet-providers-master/leaflet-providers.js"></script>
+<script src="<?= base_url() ?>assets/js/proj4leaflet.js"></script>
+<script src="<?= base_url() ?>assets/js/proj4leaflet-compressed.js"></script>
 
 <script>
+	
 	
 
 	var map = L.map('map').setView([-4.881600, 105.230373], 10);
@@ -116,7 +121,33 @@ if ($this->session->userdata('level') == 2) {
 		"opacity": 0.9
 	};
 
+	var geojsonPath = [];
+	//proj4.defs('urn:ogc:def:crs:EPSG::32748', 'PROJCS["WGS 84 / UTM zone 48S", GEOGCS["WGS 84", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], UNIT["degree", 0.017453292519943295], AXIS["Geodetic longitude", EAST], AXIS["Geodetic latitude", NORTH], AUTHORITY["EPSG","4326"]], PROJECTION["Transverse_Mercator"], PARAMETER["central_meridian", 105.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 0.9996], PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 10000000.0], UNIT["m", 1.0], AXIS["Easting", EAST], AXIS["Northing", NORTH], AUTHORITY["EPSG","32748"]]');
+	$.ajax({
+		type: 'GET',
+		url: '<?= URL_GEO ?>/geoserver/rest/layers',
+		headers: {
+			'Authorization' : 'Basic <?= AUTH_GEO ?>',
+		},
+		crossDomain: true,
+		success: (data) => {
+			let geo_layer = data.layers.layer;
+			geo_layer.forEach((idx, el) => {				
+				if(idx.name.includes("<?= LAYER_GEO ?>")) {
+					geojsonPath.push(idx.name);
+				}
+			});
+			var settings = {
+				"url": "http://localhost:8082/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+geojsonPath[0]+"&outputFormat=application%2Fjson",
+				"method": "GET",
+			};
 
+			$.ajax(settings).done(function (response) {
+				console.log(response);
+			});
+		},
+		error : (e) => (console.log(e)),
+	});
 
 	$.ajax({ // ini perintah syntax ajax untuk memanggil vektor
     type: 'POST',

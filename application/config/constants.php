@@ -83,3 +83,8 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+defined('USER_GEO')            OR define('USER_GEO', 'admin');
+defined('PASS_GEO')            OR define('PASS_GEO', 'geoserver');
+defined('URL_GEO')             OR define('URL_GEO', 'http://localhost:8082');
+defined('AUTH_GEO')            OR define('AUTH_GEO', base64_encode(USER_GEO.':'.PASS_GEO));
+defined('LAYER_GEO')            OR define('LAYER_GEO', 'rams:');
