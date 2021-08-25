@@ -19,8 +19,13 @@ class Main extends CI_Controller
 	{
 		
 		$data['dataTol'] = $this->ModelSpasial->datajalanTol();
+		
+		// $this->load->model('ModelSpasial');
+		// $this->data['namaTol'] = $this->model_name->get_daftartol();
+		// $this->load->view('admin/form_data_teknik', $this->data);
 
 		$data['judul'] = "Dashboard";
+		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/navbar');
 		$this->load->view('templates/sidebar');

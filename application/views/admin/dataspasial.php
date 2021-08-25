@@ -34,7 +34,14 @@ if ($this->session->userdata('level') == 2) {
                         <!-- <label class="control-label">Nama Jalan Tol : </label> -->
                                         <!-- <div class="col-md-4 col-sm-4"> -->
                                             <select class="form-control">
-                                                <option>BAKAUHENI - TERBANGGI BESAR</option>
+                                            <?php
+                                                foreach($dataTol as $tol):
+                                            ?>    
+                                            <?php if ($tol['keterangan_tol'] === 't'): ?>
+                                                <option><?= $tol['nama_jt'] ?></option> 												<?php endif; ?>        
+                                            <?php
+                                            endforeach;
+                                            ?>
                                             </select>
                                         <!-- </div> -->
                         </div>
@@ -87,9 +94,18 @@ if ($this->session->userdata('level') == 2) {
                     <div class="form-group row">
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Nama Jalan Tol</label>
                         <div class="col-sm-10">
-                            <select name="nama_tol" class="form-control" required>
-                                <option value="BAKAUHENI - TERBANGGI BESAR">BAKAUHENI - TERBANGGI BESAR</option>
+                        <select class="form-control">
+                            <?php
+                                foreach($dataTol as $tol):
+                            ?>    
+                            <?php if ($tol['keterangan_tol'] === 't'): ?>
+                            <option><?= $tol['nama_jt'] ?></option> 												<?php endif; ?>        
+                            <?php
+                                endforeach;
+                            ?>
                             </select>
+                            
+                           
                         </div>
                     </div>
                     <?php
@@ -104,9 +120,16 @@ if ($this->session->userdata('level') == 2) {
                         <div class="col-sm-10">
                             <select name="nama_atribut" class="form-control" required>
                                 <option value="">Pilih Atribut</option>
-                                <?php foreach ($get as $g) { ?>
+                                <!-- <?php foreach ($get as $g) { ?>
                                     <option value="<?= $g['kode_atribut'] ?>"><?= $g['kode_atribut'] . '. ' . strtoupper($g['nama_atribut_batasan']) ?></option>
-                                <?php } ?>
+                                <?php } ?> -->
+                                <?php
+                                    foreach($batasan as $batas):
+                                ?>    
+                                    <option><?= $batas['nama_atribut_batasan'] ?></option>        
+                                <?php
+                                    endforeach;
+                                ?>
                             </select>
                         </div>
                     </div>

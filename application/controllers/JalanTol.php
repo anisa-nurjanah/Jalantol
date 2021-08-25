@@ -10,6 +10,7 @@ class JalanTol extends CI_Controller
     {
         parent::__construct();
         $this->load->model('ModelTeknik', 'Model');
+        $this->load->model('ModelSpasial');
     }
 
     public function index()
@@ -545,6 +546,8 @@ class JalanTol extends CI_Controller
     public function dataspasial()
     {
         $data['judul'] = "Data Spasial";
+        $data['dataTol'] = $this->ModelSpasial->datajalanTol();
+        $data['batasan'] = $this->ModelSpasial->batasan();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('templates/sidebar');
@@ -689,6 +692,7 @@ class JalanTol extends CI_Controller
     public function Form_new()
     {
         $data['judul'] = "Formulir Data Teknik";
+        $data['dataTol'] = $this->ModelSpasial->datajalanTol();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('templates/sidebar');
@@ -696,10 +700,19 @@ class JalanTol extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function daftar_ruas(){
+        $this->load->helper('url');
+        $id = $this->input->post('ruas_km');
+        $this->Model->update_ruas($id);
+        if($this->input->post('ruas_km')){
+            redirect('dataspasial');
+        }
+    }
     public function datateknik()
     {
         $data['judul'] = "Formulir Data Teknik";
         $data['url'] = 'data_teknik';
+        $data['dataTol'] = $this->ModelSpasial->datajalanTol();
         // $data['datatable_seksi'] = $this->Model->get_segmen_seksi();
         // $data['datatable_ident'] = $this->Model->get_ident();
         // $data['datatable_d1'] = $this->Model->get_data1();
@@ -738,7 +751,7 @@ class JalanTol extends CI_Controller
     {
         include APPPATH . 'third_party/PHPExcel/PHPExcel.php';
 
-        $config['upload_path']        = './assets/excel/';
+        $config['upload_path'] = './assets/excel/';
         $config['allowed_types'] = 'xlsx|xls';
         $config['max_size'] = '10000';
         $config['encrypt_name'] = true;

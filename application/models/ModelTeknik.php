@@ -2,6 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class ModelTeknik extends CI_Model{
+
+    function update_ruas($id){
+		$this->db->set('keterangan_tol', 'true');
+        $this->db->where('id_daftar', $id);
+        $this->db->update('daftar_tol');
+		return $ruas;
+	}
     function get_segmen_seksi(){
         $segmen_seksi = $this->db->get('segmen_seksi');
         return $segmen_seksi;
