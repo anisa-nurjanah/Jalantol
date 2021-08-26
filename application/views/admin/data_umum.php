@@ -97,8 +97,9 @@ if ($this->session->userdata('level') == 2) {
 <!-- <script src="<?= base_url() ?>assets/js/leaflet-providers-master/leaflet-providers.js"></script> -->
 <script src="<?= base_url() ?>assets/js/proj4leaflet_raw.js"></script>
 <script src="<?= base_url() ?>assets/js/leaflet-providers-master/leaflet-providers.js"></script>
-<script src="<?= base_url() ?>assets/js/proj4leaflet.js"></script>
 <script src="<?= base_url() ?>assets/js/proj4leaflet-compressed.js"></script>
+<script src="<?= base_url() ?>assets/js/proj4leaflet.js"></script>
+
 
 <script>
 	
@@ -120,12 +121,16 @@ if ($this->session->userdata('level') == 2) {
 		"weight": 1,
 		"opacity": 0.9
 	};
-
+	
 	var geojsonPath = [];
-	//proj4.defs('urn:ogc:def:crs:EPSG::32748', 'PROJCS["WGS 84 / UTM zone 48S", GEOGCS["WGS 84", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], UNIT["degree", 0.017453292519943295], AXIS["Geodetic longitude", EAST], AXIS["Geodetic latitude", NORTH], AUTHORITY["EPSG","4326"]], PROJECTION["Transverse_Mercator"], PARAMETER["central_meridian", 105.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 0.9996], PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 10000000.0], UNIT["m", 1.0], AXIS["Easting", EAST], AXIS["Northing", NORTH], AUTHORITY["EPSG","32748"]]');
+	proj4.defs('urn:ogc:def:crs:EPSG::4326', 'PROJCS["WGS 84 / UTM zone 48S", GEOGCS["WGS 84", DATUM["World Geodetic System 1984", SPHEROID["WGS 84", 6378137.0, 298.257223563, AUTHORITY["EPSG","7030"]], AUTHORITY["EPSG","6326"]], PRIMEM["Greenwich", 0.0, AUTHORITY["EPSG","8901"]], UNIT["degree", 0.017453292519943295], AXIS["Geodetic longitude", EAST], AXIS["Geodetic latitude", NORTH], AUTHORITY["EPSG","4326"]], PROJECTION["Transverse_Mercator"], PARAMETER["central_meridian", 105.0], PARAMETER["latitude_of_origin", 0.0], PARAMETER["scale_factor", 0.9996], PARAMETER["false_easting", 500000.0], PARAMETER["false_northing", 10000000.0], UNIT["m", 1.0], AXIS["Easting", EAST], AXIS["Northing", NORTH], AUTHORITY["EPSG","32748"]]');
+
 	$.ajax({
-		type: 'GET',
-		url: '<?= URL_GEO ?>/geoserver/rest/layers',
+		type: 'POST',
+		url: '<?= base_url() ?>/Dataumum/requestHelper',
+		data: {
+			url: "<?= URL_GEO ?>/geoserver/rest/layers"
+		},
 		headers: {
 			'Authorization' : 'Basic <?= AUTH_GEO ?>',
 		},
@@ -137,39 +142,42 @@ if ($this->session->userdata('level') == 2) {
 					geojsonPath.push(idx.name);
 				}
 			});
-			var settings = {
-				"url": "http://localhost:8082/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+geojsonPath[0]+"&outputFormat=application%2Fjson",
-				"method": "GET",
-			};
+			geojsonPath.forEach((el) => {
+				var settings = {
+					"url": "http://localhost:8082/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+el+"&outputFormat=application%2Fjson",
+					"method": "GET",
+				};
 
-			$.ajax(settings).done(function (response) {
-				console.log(response);
+				$.ajax(settings).done(function (response) {
+					L.Proj.geoJson(response).addTo(map);
+				});
 			});
+			
 		},
 		error : (e) => (console.log(e)),
 	});
 
 	$.ajax({ // ini perintah syntax ajax untuk memanggil vektor
-    type: 'POST',
-    url: 'assets/data_spasial.php', // INI memanggil link request_bali yang sebelumnya telah di buat
-    dataType: "json",
- 	success: function(response){
- 	  var data=response; 
-	   console.log(data.features)
-	//    console.log(data);
-	   L.geoJson(data,{
-     		style: function(feature){
-				console.log(feature)
-   				 var Style1
-    				return { color: "#cc3f39", weight: 1, opacity: 1 }; // ini adalah style yang akan digunakan
-    },
-      // MENAMPILKAN POPUP DENGAN ISI BERDASARKAN ATRIBUT KAB_KOTA
-      onEachFeature: function( feature, layer ){
-        layer.bindPopup( "<center>" + feature + "</center>")
-      }
-      }).addTo(map);  // di akhir selalu di akhiri dengan perintah ini karena objek akan ditambahkan ke map
-    }
-	
-});
-console.log(map);
+		type: 'POST',
+		url: 'assets/data_spasial.php', // INI memanggil link request_bali yang sebelumnya telah di buat
+		dataType: "json",
+		success: function(response){
+		var data=response; 
+		console.log(data.features)
+		//    console.log(data);
+		L.geoJson(data,{
+				style: function(feature){
+					//console.log(feature)
+					var Style1
+						return { color: "#cc3f39", weight: 1, opacity: 1 }; // ini adalah style yang akan digunakan
+		},
+		// MENAMPILKAN POPUP DENGAN ISI BERDASARKAN ATRIBUT KAB_KOTA
+		onEachFeature: function( feature, layer ){
+			layer.bindPopup( "<center>" + feature + "</center>")
+		}
+		}).addTo(map);  // di akhir selalu di akhiri dengan perintah ini karena objek akan ditambahkan ke map
+		}
+		
+	});
+//console.log(map);
 </script>
