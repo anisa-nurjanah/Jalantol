@@ -18,4 +18,27 @@ class Dataumum extends CI_Controller
         $this->load->view('admin/data_umum', $data);
         $this->load->view('templates/footer');
     }
+
+    public function requestHelper()
+    {
+        $url = $this->input->post('url');
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => $url,
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => '',
+          CURLOPT_FOLLOWLOCATION => true,
+          CURLOPT_CUSTOMREQUEST => 'GET',
+          CURLOPT_HTTPHEADER => array(
+            'Authorization: Basic '.AUTH_GEO,
+            'Content-Type: application/json'
+          ),
+        ));
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        header('Content-Type: application/json');
+        echo $response;
+    }
 }
