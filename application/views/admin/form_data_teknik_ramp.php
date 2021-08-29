@@ -39,18 +39,34 @@ if ($this->session->userdata('level') == 2) {
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive">
-                            <form id="addidentifikasi_ramp">
+                            <!-- <form id="addidentifikasi_ramp" method="PUT" action=""> -->
+                            <?php echo form_open('jalantol/daftar_ruas'); ?>
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="ruas">Ruas</label>
-                                            <input type="text" name="ruas" class="form-control" id="ruas" placeholder="Masukkan Ruas" required>
+
+                                        <div class="col-md-12">
+                                        <label class="control-label">Ruas</label>
+                                  
+
+                                            <select class="form-control" id="ruas_km" name="ruas_km">
+                                                <option value="">Pilih Ruas</option>
+                                                <?php
+                                                    foreach($dataTol as $tol):
+                                                ?>
+                                                    <?php if ($tol['keterangan_tol'] !== 't'): ?>
+                                                        <option value="<?= $tol['id_daftar'] ?>" ><?= $tol['nama_jt'] ?></option> 
+                                                    <?php endif; ?>         
+                                                <?php
+                                                    endforeach;
+                                                ?>
+                                            </select>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="ruas_km">Ruas KM</label>
-                                            <input type="text" name="ruas_km" class="form-control" id="ruas_km" placeholder="Masukkan Ruas KM" required>
+
+                                            <!-- <label for="ruas">Ruas</label>
+                                            <input type="text" name="ruas" class="form-control" id="ruas" placeholder="Masukkan Ruas" required> -->
                                         </div>
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="seksi_ruas">Seksi Ruas</label>
                                                 <input type="text" name="seksi_ruas" class="form-control" id="seksi_ruas" placeholder="Masukkan Seksi Ruas" required>
@@ -91,14 +107,22 @@ if ($this->session->userdata('level') == 2) {
                                                 <select class="form-control select2kelurahan" name="desa" id="kelurahan" style="width: 100%;" required disabled>
                                                     <option value="">Pilih Desa</option>
                                                 </select>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+
+                                    <div class="card">
+                        <!-- <div class="card-header">
+                            <h3 class="card-title"></h3>
+                        </div> -->
+                        <!-- /.card-header -->
+
+                        </div>
+                                    <!-- <div class="col-md-4">
                                         <div id="map"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="form-group col-md-3">
                                         <label for="sta_awal">STA Awal</label>
                                         <input type="text" name="sta_awal" class="form-control" id="sta_awal" placeholder="Masukkan STA Awal" required>
@@ -141,30 +165,54 @@ if ($this->session->userdata('level') == 2) {
                                         <label for="deskripsi_akhir">Deskripsi Akhir</label>
                                         <input type="text" name="deskripsi_akhir" class="form-control" id="deskripsi_akhir" placeholder="Masukkan Deskripsi Akhir" required>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- /.card-body -->
                                 <div class="card-footer">
-                                    <button class="btn btn-primary" type="submit">Simpan</button>
-                                    <button class="btn btn-secondary" type="reset">Batal</button>
+                                <input class="btn btn-primary" type="submit" name="submit" value="Simpan" />
+                                    <input class="btn btn-secondary" type="reset" name="reset" value="batal" />
                                 </div>
-                            </form>
+                                <?php echo form_close(); ?>
+                            <!-- </form> -->
                         </div>
                         <!-- /.card -->
                     </div>
                     <!-- /.col -->
-                    <div class="card">
-                        <!-- <div class="card-header">
-                            <h3 class="card-title"></h3>
-                        </div> -->
-                        <!-- /.card-header -->
-                        <div class="card-body">
+
+                    <div class="card-body">
                             <ul class="alert alert-info" style="padding-left: 40px">
                                 <li>Silahkan import data dari excel, menggunakan format yang sudah disediakan</li>
                                 <li>Data tidak boleh ada yang kosong, harus terisi semua.</li>
                                 <!-- <li>Untuk data Kelas, hanya bisa diisi menggunakan Kode Kelas. <a data-toggle="modal" href="#kelasId" style="text-decoration:none" class="btn btn-xs btn-primary">Lihat Kode</a>.</li> -->
                             </ul>
                             <div class="text-center">
-                                <a href="<?= base_url('template_excel/SELURUH DATA.xlsx') ?>" class="btn btn-success"><i class="fa fa-file-download"></i> Download Format</a>
+                                <a href="<?= base_url('template_excel/Template Data Teknik.xlsx') ?>" class="btn btn-success"><i class="fa fa-file-download"></i> Download Format</a>
+                            </div>
+                            <?= form_open_multipart('jalantol/upload_excel'); ?>
+                            <?php echo $this->session->flashdata('notif') ?>
+                            <label for="">Pilih File</label>
+                            <div class="form-group" id="">
+                                <?= form_error('file', '<div class="alert alert-danger">', '</div>'); ?>
+                                <input type="file" class="form-control" name="file">
+                            </div>
+                            <div class="text-center">
+                                <button name="upload" type="submit" class="btn btn-sm btn-success"><i class="fa fa-upload"></i> Upload</button>
+                            </div>
+                            <?= form_close(); ?>
+                        </div>
+
+                    <!-- <div class="card"> -->
+                        <!-- <div class="card-header">
+                            <h3 class="card-title"></h3>
+                        </div> -->
+                        <!-- /.card-header -->
+                        <!-- <div class="card-body">
+                            <ul class="alert alert-info" style="padding-left: 40px">
+                                <li>Silahkan import data dari excel, menggunakan format yang sudah disediakan</li>
+                                <li>Data tidak boleh ada yang kosong, harus terisi semua.</li> -->
+                                <!-- <li>Untuk data Kelas, hanya bisa diisi menggunakan Kode Kelas. <a data-toggle="modal" href="#kelasId" style="text-decoration:none" class="btn btn-xs btn-primary">Lihat Kode</a>.</li> -->
+                            <!-- </ul>
+                            <div class="text-center">
+                                <a href="<?= base_url('template_excel/Template Data Teknik.xlsx') ?>" class="btn btn-success"><i class="fa fa-file-download"></i> Download Format</a>
                             </div>
                             <?= form_open_multipart('ramp/upload_excel'); ?>
                             <?php echo $this->session->flashdata('notif') ?>
@@ -182,7 +230,7 @@ if ($this->session->userdata('level') == 2) {
                             <?= form_close(); ?>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- /.row -->
             </div>
             <!-- /.container-fluid -->
@@ -220,6 +268,9 @@ if ($this->session->userdata('level') == 2) {
             // 	console.log(key);
 
             // }
+            console.log(f.properties)
+            out.push("Id: " + f.properties['id']);
+            out.push("Layer: " + f.properties['layer']);
             out.push("Ruas: " + f.properties['nama_ruas']);
             out.push("Seksi: " + f.properties['seksi']);
             out.push("KM: " + f.properties['km']);
