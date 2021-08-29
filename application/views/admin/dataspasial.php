@@ -63,6 +63,12 @@ if ($this->session->userdata('level') == 2) {
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <th>666</th>
+                                        <th>Dinda</th>
+                                        <th>Cipok</th>
+                                        <th>llaal</th>
                                 </tbody>
                             </table>
                         </div>
