@@ -148,6 +148,7 @@ if ($this->session->userdata('level') == 2) {
                     "method": "GET",
                 };
                 $.ajax(settings).done(function (response) {
+
                     L.Proj.geoJson(response).addTo(map);
                 });
             });
@@ -155,6 +156,7 @@ if ($this->session->userdata('level') == 2) {
         },
         error : (e) => (console.log(e)),
     });
+    
     $.ajax({ // ini perintah syntax ajax untuk memanggil vektor
         type: 'POST',
         url: 'assets/data_spasial.php', // INI memanggil link request_bali yang sebelumnya telah di buat

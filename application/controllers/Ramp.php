@@ -32,6 +32,7 @@ class Ramp extends CI_Controller
     {
         $this->datatables->select('A, B, C, D, E, F');
         $this->datatables->from('sheet1');
+        $this->db->where(['jenis_page' => "ramp"]);
         $this->datatables->add_column(
             'aksi',
             '<span data-toggle="tooltip" data-placement="top" title="Detail LKS"><a href="javascript:void(0);" class="detail_record btn btn-sm btn-success" data-id="$1" data-backdrop="static" data-keyboard="false">
@@ -46,6 +47,7 @@ class Ramp extends CI_Controller
         $id = $this->input->post('id');
         $table = $this->input->post('table');
         $data = $this->db->get_where($table, ["id_$table" => $id])->row_array();
+        $this->db->where(['jenis_page' => "ramp"]);
 
         echo json_encode($data);
     }
@@ -75,6 +77,7 @@ class Ramp extends CI_Controller
         $id = $this->input->post('id');
         $table = $this->input->post('table');
         $this->db->delete($table, ["id_$table" => $id]);
+        $this->db->where(['jenis_page' => "ramp"]);
 
         $data = toast('success', 'Berhasil Hapus Data!');
 
@@ -122,6 +125,7 @@ class Ramp extends CI_Controller
             'luas_pj' => $this->input->post('luas_pj'),
             'data_pj' => $this->input->post('data_pj'),
             'nilai_pj' => $this->input->post('nilai_pj'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_teknik_1', $data, ['id_data_teknik_1' => $id_data_teknik_1]);
@@ -155,7 +159,8 @@ class Ramp extends CI_Controller
             'jenis_lpa' => $this->input->post('jenis_lpa'),
             'lebar_lpb' => $this->input->post('lebar_lpb'),
             'tebal_lpb' => $this->input->post('tebal_lpb'),
-            'jenis_lpb' => $this->input->post('jenis_lpb')
+            'jenis_lpb' => $this->input->post('jenis_lpb'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_teknik_2', $data, ['id_data_teknik_2' => $id_data_teknik_2]);
@@ -192,6 +197,7 @@ class Ramp extends CI_Controller
             'kondisi_dalam_ki' => $this->input->post('kondisi_dalam_ki'),
             'kondisi_luar_ka' => $this->input->post('kondisi_luar_ka'),
             'kondisi_dalam_ka' => $this->input->post('kondisi_dalam_ka'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_teknik_2_median', $data, ['id_data_teknik_2_median' => $id_data_teknik_2_median]);
@@ -213,6 +219,7 @@ class Ramp extends CI_Controller
             'manhole_jenis_material' => $this->input->post('manhole_jenis_material'),
             'manhole_ukuran_panjang' => $this->input->post('manhole_ukuran_panjang'),
             'manhole_kondisi' => $this->input->post('manhole_kondisi'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_teknik_3', $data, ['id_data_teknik_3' => $id_data_teknik_3]);
@@ -229,6 +236,7 @@ class Ramp extends CI_Controller
             'ki' => $this->input->post('ki'),
             'mid' => $this->input->post('mid'),
             'ka' => $this->input->post('ka'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_teknik_4', $data, ['id_data_teknik_4' => $id_data_teknik_4]);
@@ -249,6 +257,7 @@ class Ramp extends CI_Controller
             'ki_sarana' => $this->input->post('ki_sarana'),
             'mid_sarana' => $this->input->post('mid_sarana'),
             'ka_sarana' => $this->input->post('ka_sarana'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_teknik_5', $data, ['id_data_teknik_5' => $id_data_teknik_5]);
@@ -264,6 +273,7 @@ class Ramp extends CI_Controller
             'uraian' => $this->input->post('uraian'),
             'tanggal_pemanfaatan' => $this->input->post('tanggal_pemanfaatan'),
             'nilai' => $this->input->post('nilai'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_lainnya', $data, ['id_data_lainnya' => $id_data_lainnya]);
@@ -300,6 +310,7 @@ class Ramp extends CI_Controller
             'tarif_ki_golongan_6' => $this->input->post('tarif_ki_golongan_6'),
             'lhr_ka_golongan_6' => $this->input->post('lhr_ka_golongan_6'),
             'tarif_ka_golongan_6' => $this->input->post('tarif_ka_golongan_6'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('lhr', $data, ['id_lhr' => $id_lhr]);
@@ -319,6 +330,7 @@ class Ramp extends CI_Controller
             'cross_fall_kanan' => $this->input->post('cross_fall_kanan'),
             'superelevasi' => $this->input->post('superelevasi'),
             'radius' => $this->input->post('radius'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('geometrik', $data, ['id_geometrik' => $id_geometrik]);
@@ -341,6 +353,7 @@ class Ramp extends CI_Controller
             'overpass_km' => $this->input->post('overpass_km'),
             'overpass_x' => $this->input->post('overpass_x'),
             'overpass_y' => $this->input->post('overpass_y'),
+            'jenis_page' => "ramp"
         ];
 
         $this->db->update('data_lingkungan_jalan', $data, ['id_data_lingkungan_jalan' => $id_data_lingkungan_jalan]);
@@ -801,6 +814,7 @@ class Ramp extends CI_Controller
                     'luas' => $sheet[$i][1],
                     'data_perolehan' => $sheet[$i][2],
                     'nilai_perolehan' => $sheet[$i][3],
+                    'jenis_page' => "ramp"
                 ];
                 // }
             }
@@ -814,6 +828,7 @@ class Ramp extends CI_Controller
                     'Luas' => $data[$i]['luas'],
                     'Data_Perolehan' => $data[$i]['data_perolehan'],
                     'Nilai_Perolehan' => $data[$i]['nilai_perolehan'],
+                    'jenis_page' => "ramp"
                 ];
 
                 $this->db->insert('data1', $data1);
@@ -866,11 +881,13 @@ class Ramp extends CI_Controller
                     'ki_2' => $sheet[$i][3],
                     'ka_1' => $sheet[$i][4],
                     'ka_2' => $sheet[$i][5],
+                    'jenis_page' => "ramp"
                 ];
 
                 $data_median[] = [
                     'uraian' => $sheet[$i][6],
                     'median' => $sheet[$i][7],
+                    'jenis_page' => "ramp"
                 ];
 
                 $data_bahu[] = [
@@ -879,6 +896,7 @@ class Ramp extends CI_Controller
                     'ki_luar' => $sheet[$i][10],
                     'ka_dalam' => $sheet[$i][11],
                     'ka_luar' => $sheet[$i][12],
+                    'jenis_page' => "ramp"
                 ];
             }
 
@@ -901,6 +919,7 @@ class Ramp extends CI_Controller
                     'KI_Jalur_2' => $data_lapisan[$i]['ki_2'],
                     'KA_Jalur_1' => $data_lapisan[$i]['ka_1'],
                     'KA_Jalur_2' => $data_lapisan[$i]['ka_2'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data_lapisan[$i]['tipe_lapisan'] != null) {
                     $this->db->insert('data2_lapis', $data1);
@@ -912,6 +931,7 @@ class Ramp extends CI_Controller
                 $data1 = [
                     'Uraian' => $data_median[$i]['uraian'],
                     'Median' => $data_median[$i]['median'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data_median[$i]['uraian'] != null) {
                     $this->db->insert('data2_median', $data1);
@@ -926,6 +946,7 @@ class Ramp extends CI_Controller
                     'KI_Luar' => $data_bahu[$i]['ki_luar'],
                     'KA_Dalam' => $data_bahu[$i]['ka_dalam'],
                     'KA_Luar' => $data_bahu[$i]['ka_luar'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data_bahu[$i]['uraian'] != null) {
                     $this->db->insert('data2_bahujalan', $data1);
@@ -982,6 +1003,7 @@ class Ramp extends CI_Controller
                     'ke_2' => $sheet[$i][2],
                     'ke_3' => $sheet[$i][3],
                     'ke_4' => $sheet[$i][4],
+                    'jenis_page' => "ramp"
                 ];
 
                 $data_saluran[] = [
@@ -999,6 +1021,7 @@ class Ramp extends CI_Controller
                     'ke_4_ki' => $sheet[$i][16],
                     'ke_4_mid' => $sheet[$i][17],
                     'ke_4_ka' => $sheet[$i][18],
+                    'jenis_page' => "ramp"
                 ];
 
                 $data_penahan[] = [
@@ -1012,6 +1035,7 @@ class Ramp extends CI_Controller
                     'ke_3_ka' => $sheet[$i][26],
                     'ke_4_ki' => $sheet[$i][27],
                     'ke_4_ka' => $sheet[$i][28],
+                    'jenis_page' => "ramp"
                 ];
             }
 
@@ -1068,6 +1092,7 @@ class Ramp extends CI_Controller
                     'Ke_4_KI' => $data_saluran[$i]['ke_4_ki'],
                     'Ke_4_MID' => $data_saluran[$i]['ke_4_mid'],
                     'Ke_4_KA' => $data_saluran[$i]['ke_4_ka'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data_saluran[$i]['jenis_saluran'] != null) {
                     $this->db->insert('data3_saluran', $data1);
@@ -1087,6 +1112,7 @@ class Ramp extends CI_Controller
                     'Ke_3_KA' => $data_penahan[$i]['ke_3_ka'],
                     'Ke_4_KI' => $data_penahan[$i]['ke_4_ki'],
                     'Ke_4_KA' => $data_penahan[$i]['ke_4_ka'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data_penahan[$i]['jenis_bangunan'] != null) {
                     $this->db->insert('data3_penahantanah', $data1);
@@ -1131,6 +1157,7 @@ class Ramp extends CI_Controller
                     'ki' => $sheet[$i][1],
                     'mid' => $sheet[$i][2],
                     'ka' => $sheet[$i][3],
+                    'jenis_page' => "ramp"
                 ];
                 // }
             }
@@ -1144,6 +1171,7 @@ class Ramp extends CI_Controller
                     'KI' => $data[$i]['ki'],
                     'MID' => $data[$i]['mid'],
                     'KA' => $data[$i]['ka'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data[$i]['uraian'] != null) {
                     $this->db->insert('data4', $data1);
@@ -1193,6 +1221,7 @@ class Ramp extends CI_Controller
                     'ki' => $sheet[$i][2],
                     'mid' => $sheet[$i][3],
                     'ka' => $sheet[$i][4],
+                    'jenis_page' => "ramp"
                 ];
 
                 $data2[] = [
@@ -1201,6 +1230,7 @@ class Ramp extends CI_Controller
                     'luas_bangunan' => $sheet[$i][7],
                     'nilai_lahan' => $sheet[$i][8],
                     'nilai_bangunan' => $sheet[$i][9],
+                    'jenis_page' => "ramp"
                 ];
             }
 
@@ -1224,6 +1254,7 @@ class Ramp extends CI_Controller
                     'KI' => $data[$i]['ki'],
                     'MID' => $data[$i]['mid'],
                     'KA' => $data[$i]['ka'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data[$i]['jenis_sarana'] != null) {
                     $this->db->insert('data5_publikfacility', $data1);
@@ -1238,6 +1269,7 @@ class Ramp extends CI_Controller
                     'Luas_Bangunan' => $data2[$i]['luas_bangunan'],
                     'Nilai_Lahan' => $data2[$i]['nilai_lahan'],
                     'Nilai_Bangunan' => $data2[$i]['nilai_bangunan'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data2[$i]['uraian'] != null) {
                     $this->db->insert('data5_bangunan', $data1);
@@ -1335,6 +1367,7 @@ class Ramp extends CI_Controller
                     'tarif_ki' => $sheet[$i][2],
                     'lhr_ka' => $sheet[$i][3],
                     'tarif_ka' => $sheet[$i][4],
+                    'jenis_page' => "ramp"
                 ];
             }
 
@@ -1348,6 +1381,7 @@ class Ramp extends CI_Controller
                     'Tarif_KI' => $data[$i]['tarif_ki'],
                     'LHR_KA' => $data[$i]['lhr_ka'],
                     'Tarif_KA' => $data[$i]['tarif_ka'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data[$i]['golongan'] != null) {
                     $this->db->insert('lintasharian', $data1);
@@ -1451,6 +1485,7 @@ class Ramp extends CI_Controller
                     'Jenis_Lingkungan' => $data[$i]['jenis_lingkungan'],
                     'Uraian' => $data[$i]['uraian'],
                     'Tahun' => $data[$i]['tahun'],
+                    'jenis_page' => "ramp"
                 ];
                 if ($data[$i]['jenis_lingkungan'] != null) {
                     if ($data[$i]['jenis_lingkungan'] == "TERRAIN" || $data[$i]['jenis_lingkungan'] == "TATA GUNA LAHAN") {
