@@ -144,7 +144,7 @@ if ($this->session->userdata('level') == 2) {
 			});
 			geojsonPath.forEach((el) => {
 				var settings = {
-					"url": "http://localhost:8080/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+el+"&outputFormat=application%2Fjson",
+					"url": "http://localhost:8082/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+el+"&outputFormat=application%2Fjson",
 					"method": "GET",
 				};
 

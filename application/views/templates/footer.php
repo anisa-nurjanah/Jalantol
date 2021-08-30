@@ -4399,6 +4399,7 @@
             "ajax": {
                 url: "<?php echo base_url('JalanTol/get_dataspasial') ?>",
                 type: 'post',
+                
             },
             "columns": [{
                     data: "id_atribut",

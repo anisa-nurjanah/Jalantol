@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "tiang telepon point",
+"name": "tiang telepon",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "id": 1, "layer": "TIANG TELEPON" }, "geometry": { "type": "Point", "coordinates": [ 105.228505154843873, -5.031658391768055 ] } },

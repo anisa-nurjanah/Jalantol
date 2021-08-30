@@ -35,6 +35,7 @@ class JalanTol extends CI_Controller
         $id = $this->input->post('id');
         $table = $this->input->post('table');
         $data = $this->db->get_where($table, ["id_$table" => $id])->row_array();
+        $this->db->where(['jenis_page' => "ledger"]);
 
         echo json_encode($data);
     }
@@ -64,7 +65,7 @@ class JalanTol extends CI_Controller
         $id = $this->input->post('id');
         $table = $this->input->post('table');
         $this->db->delete($table, ["id_$table" => $id]);
-
+        $this->db->where(['jenis_page' => "ledger"]);
         $data = toast('success', 'Berhasil Hapus Data!');
 
         echo json_encode($data);
@@ -561,16 +562,18 @@ class JalanTol extends CI_Controller
         $this->datatables->from('m_spasial');
         $this->datatables->join('batasan_data', 'batasan_data.kode_atribut=m_spasial.nama_atribut');
         $this->db->where(['jenis_page' => "ledger"]);
+        $this->db->distinct();
         $this->datatables->group_by('id_atribut, nama_atribut, batasan_data.nama_atribut_batasan, geojson_atribut, nama_spasial, jenis_page,batasan_data.kode_atribut,batasan_data.id_batasan_data, batasan_data.nama_atribut_batasan, batasan_data.nama_spasial_batasan, batasan_data.data_teknik, batasan_data.created_at_batasan,batasan_data.data_spasial');
         $this->datatables->add_column(
             'aksi',
             '<span data-toggle="tooltip" data-placement="top" title="Edit Data Spasial"><a href="javascript:void(0);" class="edit_record btn btn-sm btn-primary" data-id="$1" data-backdrop="static" data-keyboard="false">
-            <i class="fas fa-edit"></i> </a> </span>
+            <i class="fas fa-edit"></i> </a></span>
             <span data-toggle="tooltip" data-placement="top" title="Hapus Data Spasial"><a href="javascript:void(0);" class="delete_record btn btn-sm btn-danger" data-id="$1" data-backdrop="static" data-keyboard="false">
             <i class="fas fa-trash"></i> </a>',
             'id_atribut'
         );
         return print_r($this->datatables->generate());
+        
     }
 
     public function tambah_dataspasial()
@@ -590,6 +593,8 @@ class JalanTol extends CI_Controller
                     'nama_atribut' => $this->input->post('nama_atribut'),
                     'geojson_atribut' => $new_geojson,
                     'nama_spasial' => $this->input->post('nama_spasial'),
+                    'jenis_page' => "ledger"
+
                     // 'warna_atribut' => $this->input->post('warna_atribut')
                 ];
 
@@ -630,6 +635,7 @@ class JalanTol extends CI_Controller
             $config['allowed_types'] = '*';
             $config['max_size'] = 1000;
             $this->load->library('upload', $config);
+            
 
             if ($this->upload->do_upload('geojson_atribut')) {
 
@@ -641,6 +647,8 @@ class JalanTol extends CI_Controller
                     'nama_atribut' => $this->input->post('nama_atribut'),
                     'geojson_atribut' => $new_geojson,
                     'nama_spasial' => $this->input->post('nama_spasial'),
+                    'jenis_page' => "ledger"
+
                     // 'warna_atribut' => $this->input->post('warna_atribut')
                 ];
 
@@ -658,6 +666,8 @@ class JalanTol extends CI_Controller
             $data = [
                 'nama_atribut' => $this->input->post('nama_atribut'),
                 'nama_spasial' => $this->input->post('nama_spasial'),
+                'jenis_page' => "ledger"
+
                 // 'warna_atribut' => $this->input->post('warna_atribut')
             ];
 

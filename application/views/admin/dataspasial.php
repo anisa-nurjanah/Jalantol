@@ -63,12 +63,6 @@ if ($this->session->userdata('level') == 2) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <th>666</th>
-                                        <th>Dinda</th>
-                                        <th>Cipok</th>
-                                        <th>llaal</th>
                                 </tbody>
                             </table>
                         </div>
@@ -126,9 +120,9 @@ if ($this->session->userdata('level') == 2) {
                         <div class="col-sm-10">
                             <select name="nama_atribut" class="form-control" required>
                                 <option value="">Pilih Atribut</option>
-                                <!-- <?php foreach ($get as $g) { ?>
-                                    <option value="<?= $g['kode_atribut'] ?>"><?= $g['kode_atribut'] . '. ' . strtoupper($g['nama_atribut_batasan']) ?></option>
-                                <?php } ?> -->
+                                <?php foreach ($get as $g) { ?>
+                                    <option value="<?= $g['kode_atribut'] ?>"><?= $g['kode_atribut'] . '. ' . strtoupper($g['kode_atribut']) ?></option>
+                                <?php } ?>
                                 <?php
                                     foreach($batasan as $batas):
                                 ?>    

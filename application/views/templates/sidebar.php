@@ -93,7 +93,14 @@
                                     </p>
                                 </a>
                             </li>
-
+                            <!-- <li class="nav-item">
+                                <a href="<?= base_url('dataumum_ramp') ?>" class="nav-link <?= $this->uri->segment(1) == 'dataumum_ramp' ? ' active' : '' ?>">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>
+                                        Data Umum ramp
+                                    </p>
+                                </a>
+                            </li>  -->
                     <!-- <li class="nav-item has-treeview<?= $this->uri->segment(1) == 'dataumum_ramp' ||  $this->uri->segment(1) == 'datateknik_ramp' || $this->uri->segment(1) == "Form_new_ramp" ? ' menu-open' : '' ?>">
                         <a href="#" class="nav-link<?= $this->uri->segment(1) == 'dataumum_ramp' || $this->uri->segment(1) == 'datateknik_ramp' || $this->uri->segment(1) == "Form_new_ramp" ? ' active' : '' ?>">
                             <i class="nav-icon fas fa-list"></i>
@@ -107,7 +114,7 @@
                                 <a href="<?= base_url('dataumum_ramp') ?>" class="nav-link <?= $this->uri->segment(1) == 'dataumum_ramp' ? ' active' : '' ?>">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>
-                                        Data Umum
+                                        Data Umum ramp
                                     </p>
                                 </a>
                             </li> -->
