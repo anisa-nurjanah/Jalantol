@@ -109,9 +109,9 @@ if ($this->session->userdata('level') == 2) {
                         </div>
                     </div>
                     <?php
-                    $this->db->select('kode_atribut');
+                    $this->db->select('kode_atribut, nama_atribut_batasan');
                     $this->db->from('batasan_data');
-                    $this->db->group_by('kode_atribut');
+                    $this->db->group_by('kode_atribut, nama_atribut_batasan');
                     $this->db->order_by('kode_atribut', 'asc');
                     $get = $this->db->get()->result_array();
                     ?>

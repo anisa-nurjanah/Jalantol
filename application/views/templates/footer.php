@@ -4560,6 +4560,7 @@
             "columns": [{
                     data: "id_atribut",
                     class: "text-center",
+                    searchable: false,
                     render: function(data, type, row, meta) {
                         return meta.row + meta.settings._iDisplayStart + 1;
                     }

@@ -41,4 +41,6 @@ class Dataumum extends CI_Controller
         header('Content-Type: application/json');
         echo $response;
     }
+
+    
 }

@@ -578,6 +578,7 @@ class Ramp extends CI_Controller
         $this->load->view('templates/sidebar');
         $this->load->view('admin/dataspasial_ramp', $data);
         $this->load->view('templates/footer');
+        
     }
 
     public function get_dataspasial()

@@ -144,11 +144,19 @@ if ($this->session->userdata('level') == 2) {
 			});
 			geojsonPath.forEach((el) => {
 				var settings = {
-					"url": "http://localhost:8082/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+el+"&outputFormat=application%2Fjson",
+					"url": "<?= URL_GEO ?>/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+el+"&outputFormat=application%2Fjson",
 					"method": "GET",
 				};
 
-				$.ajax(settings).done(function (response) {
+				let payload = {
+					"url" : '<?= base_url() ?>/Dataumum/requestHelper',
+					"data": {
+						"url": "<?= URL_GEO ?>/geoserver/rams/ows?service=WFS&version=1.0.0&request=GetFeature&typeName="+el+"&outputFormat=application%2Fjson",
+					},
+					"method": "POST"
+				}
+
+				$.ajax(payload).done(function (response) {
 					L.Proj.geoJson(response).addTo(map);
 				});
 			});
