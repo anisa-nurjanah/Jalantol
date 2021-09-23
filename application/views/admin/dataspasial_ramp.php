@@ -109,9 +109,10 @@ if ($this->session->userdata('level') == 2) {
                         </div>
                     </div>
                     <?php
-                    $this->db->select('kode_atribut');
+                    $this->db->select('kode_atribut, nama_atribut_batasan');
                     $this->db->from('batasan_data');
-                    $this->db->group_by('kode_atribut');
+                    // $this->db->group_by('kode_atribut');
+                    $this->db->distinct();
                     $this->db->order_by('kode_atribut', 'asc');
                     $get = $this->db->get()->result_array();
                     ?>
@@ -121,15 +122,8 @@ if ($this->session->userdata('level') == 2) {
                             <select name="nama_atribut" class="form-control" required>
                                 <option value="">Pilih Atribut</option>
                                 <?php foreach ($get as $g) { ?>
-                                    <option value="<?= $g['kode_atribut'] ?>"><?= $g['kode_atribut'] . '. ' . strtoupper($g['kode_atribut']) ?></option>
-                                    <?php } ?>
-                                <?php
-                                    foreach($batasan as $batas):
-                                ?>    
-                                    <option><?= $batas['nama_atribut_batasan'] ?></option>        
-                                <?php
-                                    endforeach;
-                                ?>
+                                    <option value="<?= $g['nama_atribut_batasan']?>"><?= $g['kode_atribut'] . '. ' . $g['nama_atribut_batasan'] ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>

@@ -64,9 +64,9 @@ if ($this->session->userdata('level') == 2) {
                                             </select>
                                         </div>
 							</h3>
-							<div class="float-right">
+							<!-- <div class="float-right">
 								<a href="<?= site_url('Form_new') ?>" class="btn btn-info"><i class="fa fa-plus"></i>Tambah Kartu Leger Jalan Tol</a>
-							</div>
+							</div> -->
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
