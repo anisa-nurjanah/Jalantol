@@ -92,6 +92,9 @@ if ($this->session->userdata('level') == 2) {
                                 <i class="fas fa-map mr-1"></i>
                                 RUAS BAKAUHENI - TERBANGGI BESAR
                             </h3>
+                            <div class="float-right">
+								<a href="<?= site_url('Form_new') ?>" class="btn btn-info"><i class="fa fa-plus"></i>Tambah Data Teknik MAINROAD</a>
+							</div>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body" id="weathermap">
@@ -300,10 +303,10 @@ if ($this->session->userdata('level') == 2) {
                                                                 <th scope="row" rowspan="2">Jenis Median</th>
                                                                 <th scope="row" rowspan="2">Kondisi Median</th>
                                                                 <th colspan="4" style="text-align: center;">Lebar Bahu Jalan</th>
-                                                                <th colspan="4" style="text-align: center;">Tebal</th>
-                                                                <th colspan="4" style="text-align: center;">Jenis</th>
-                                                                <th colspan="4" style="text-align: center;">Posisi</th>
-                                                                <th colspan="4" style="text-align: center;">Kondisi</th>
+                                                                <th colspan="4" style="text-align: center;">Tebal Bahu Jalan</th>
+                                                                <th colspan="4" style="text-align: center;">Jenis Bahu Jalan</th>
+                                                                <th colspan="4" style="text-align: center;">Posisi Bahu Jalan</th>
+                                                                <th colspan="4" style="text-align: center;">Kondisi Bahu Jalan</th>
                                                                 <th scope="row" rowspan="2">Aksi</th>
                                                             <tr>
                                                                 <th colspan="1">LUAR KI</th>

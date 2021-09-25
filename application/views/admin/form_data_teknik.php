@@ -40,7 +40,7 @@ if ($this->session->userdata('level') == 2) {
                         <!-- /.card-header -->
                         <div class="card-body table-responsive">
                             <!-- <form id="addidentifikasi" method="PUT" action=""> -->
-                            <?php echo form_open('jalantol/daftar_ruas'); ?>
+                            <!-- <?php echo form_open('jalantol/daftar_ruas'); ?>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -61,11 +61,11 @@ if ($this->session->userdata('level') == 2) {
 													endforeach;
 												?>
                                             </select>
-                                        </div>
+                                        </div> -->
 
                                             <!-- <label for="ruas">Ruas</label>
                                             <input type="text" name="ruas" class="form-control" id="ruas" placeholder="Masukkan Ruas" required> -->
-                                        </div>
+                                        <!-- </div> -->
                                         <!-- <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="seksi_ruas">Seksi Ruas</label>
@@ -108,20 +108,20 @@ if ($this->session->userdata('level') == 2) {
                                                     <option value="">Pilih Desa</option>
                                                 </select>
                                             </div> -->
-                                        </div>
+                                        <!-- </div>
                                     </div>
 
-                                    <div class="card">
+                                    <div class="card"> -->
                         <!-- <div class="card-header">
                             <h3 class="card-title"></h3>
                         </div> -->
                         <!-- /.card-header -->
                         
-                    </div>
+                    <!-- </div> -->
                                     <!-- <div class="col-md-4">
                                         <div id="map"></div>
                                     </div> -->
-                                </div>
+                                <!-- </div> -->
                                 <!-- <div class="row">
                                     <div class="form-group col-md-3">
                                         <label for="sta_awal">STA Awal</label>
@@ -167,15 +167,15 @@ if ($this->session->userdata('level') == 2) {
                                     </div>
                                 </div> -->
                                 <!-- /.card-body -->
-                                <div class="card-footer">
+                                <!-- <div class="card-footer">
                                     <input class="btn btn-primary" type="submit" name="submit" value="Simpan" />
                                     <input class="btn btn-secondary" type="reset" name="reset" value="batal" />
                                 </div>
-                                <?php echo form_close(); ?>
+                                <?php echo form_close(); ?> -->
                             <!-- </form> -->
-                        </div>
+                        <!-- </div> -->
                         <!-- /.card -->
-                    </div>
+                    <!-- </div> -->
                     <!-- /.col -->
 
                     <div class="card-body">

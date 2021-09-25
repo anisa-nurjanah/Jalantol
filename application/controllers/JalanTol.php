@@ -1532,6 +1532,8 @@ class JalanTol extends CI_Controller
                                 'kabupaten' => $sheet[$j][15],
                                 'kecamatan' => $sheet[$j][16],
                                 'desa' => $sheet[$j][17],
+                                'jenis_page' => "ledger",
+                                
                             ];
                             $this->db->insert('identifikasi', $data);
                         }
@@ -1547,6 +1549,7 @@ class JalanTol extends CI_Controller
                                 'luas_pj' => $sheet[$j][4],
                                 'data_pj' => $sheet[$j][5],
                                 'nilai_pj' => $sheet[$j][6],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('data_teknik_1', $data);
                         }
@@ -1578,6 +1581,7 @@ class JalanTol extends CI_Controller
                                 'lebar_lpb' => $sheet[$j][20],
                                 'tebal_lpb' => $sheet[$j][21],
                                 'jenis_lpb' => $sheet[$j][22],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('data_teknik_2', $data);
                         }
@@ -1611,6 +1615,7 @@ class JalanTol extends CI_Controller
                                 'kondisi_dalam_ki' => $sheet[$j][22],
                                 'kondisi_dalam_ka' => $sheet[$j][23],
                                 'kondisi_luar_ka' => $sheet[$j][24],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('data_teknik_2_median', $data);
                         }
@@ -1629,6 +1634,7 @@ class JalanTol extends CI_Controller
                                 'manhole_jenis_material' => $sheet[$j][7],
                                 'manhole_ukuran_panjang' => $sheet[$j][8],
                                 'manhole_kondisi' => $sheet[$j][9],
+                                'jenis_page' => "ledger",
                             ];
 
                             $this->db->insert('data_teknik_3', $data);
@@ -1643,6 +1649,7 @@ class JalanTol extends CI_Controller
                                 'ki' => $sheet[$j][2],
                                 'mid' => $sheet[$j][3],
                                 'ka' => $sheet[$j][4],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('data_teknik_4', $data);
                         }
@@ -1660,6 +1667,7 @@ class JalanTol extends CI_Controller
                                 'ki_sarana' => $sheet[$j][6],
                                 'mid_sarana' => $sheet[$j][7],
                                 'ka_sarana' => $sheet[$j][8],
+                                'jenis_page' => "ledger",
                             ];
 
                             $this->db->insert('data_teknik_5', $data);
@@ -1673,6 +1681,7 @@ class JalanTol extends CI_Controller
                                 'uraian' => $sheet[$j][1],
                                 'tanggal_pemanfaatan' => $sheet[$j][2],
                                 'nilai' => $sheet[$j][3],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('data_lainnya', $data);
                         }
@@ -1706,6 +1715,7 @@ class JalanTol extends CI_Controller
                                 'tarif_ki_golongan_6' => $sheet[$j][22],
                                 'lhr_ka_golongan_6' => $sheet[$j][23],
                                 'tarif_ka_golongan_6' => $sheet[$j][24],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('lhr', $data);
                         }
@@ -1722,6 +1732,7 @@ class JalanTol extends CI_Controller
                                 'cross_fall_kanan' => $sheet[$j][5],
                                 'superelevasi' => $sheet[$j][6],
                                 'radius' => $sheet[$j][7],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('geometrik', $data);
                         }
@@ -1741,6 +1752,7 @@ class JalanTol extends CI_Controller
                                 'overpass_km' => $sheet[$j][8],
                                 'overpass_x' => $sheet[$j][9],
                                 'overpass_y' => $sheet[$j][10],
+                                'jenis_page' => "ledger",
                             ];
                             $this->db->insert('data_lingkungan_jalan', $data);
                         }
